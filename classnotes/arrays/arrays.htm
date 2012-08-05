@@ -1,0 +1,96 @@
+<h1>Array</h1>
+
+<pre>
+// array of letters
+
+
+$letters = array('z','y','a','n','b','x','c');
+// var_dump
+print_r($letters);
+hr();
+
+echo 'Number of items: <strong>count</strong><br>';
+echo 'There are '.count($letters).' items in the $letters array<br />';
+
+echo 'Sorted by value: <strong>sort</strong><br>';
+sort($letters);
+print_r($letters);
+
+
+foreach
+
+array_search (returns index)
+echo array_search('a', $letters);
+
+in_array
+if ( in_array('z', $letters)) echo 'yay!';
+else echo 'boo :[';
+
+array_push
+array_push($letters, 'q');
+print_r($letters);
+
+
+array_pop
+echo array_pop($letters);
+hr();
+print_r($letters);
+
+array_shift
+echo array_shift($letters);
+hr();
+print_r($letters);
+
+<hr>
+array of numbers
+
+$numbers = array(4,1,7,11,-1,9,33,-4);
+print_r($numbers);
+hr();
+
+echo 'Sorted by value: <strong>sort</strong><br>';
+sort($numbers);
+print_r($numbers);
+
+echo 'Sum of values: <strong>array_sum</strong><br>';
+echo array_sum($numbers);
+
+
+<hr>
+associative array
+
+$person = array(
+	'firstname'		=> 'Duncan',
+	'lastname'		=> 'Heal',
+	'gender'		=> 'male',
+	'age'			=> 36,
+	'occupation'	=> 'developer'
+	);
+print_r($person);
+hr();
+
+echo 'Sorted by key: <strong>ksort</strong><br>';
+ksort($person);
+print_r($person);
+
+echo 'Sorted by value: <strong>asort</strong><br>';
+asort($person);
+print_r($person);
+
+
+
+<hr>
+range
+
+$range = range(1, 10);
+print_r($range);
+hr();
+
+echo '1 to 10 mixed up: <strong>shuffle</strong><br>';
+shuffle($range);
+print_r($range);
+
+echo 'Random number from 1 to 20: <strong>array_rand</strong> (gives a random key, not the value)<br>';
+$random_key = array_rand($range);
+echo $range[$random_key];
+</pre>

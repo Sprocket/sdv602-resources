@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>HTML</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="container">
+	<h1>HTML</h1>
+
+<p><strong>HyperText Markup Language</strong> is used to give web pages structure.</p>
+
+<p>It is based around <strong>tags</strong>, which usually wrap the content. Most of the time they have opening and closing pairs.</p>
+
+<pre class="prettyprint linenums languague-html">
+&lt;h1&gt;This is a heading.&lt;/h1&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+</pre>
+
+<p>Tags can contain other tags, like this:</p>
+
+<pre class="prettyprint linenums languague-html">
+&lt;p&gt;This is a paragraph with a &lt;a href="home.html"&gt;link&lt;/a&gt; inside it.&lt;/p&gt;
+</pre>
+
+<p>Tags can also have attributes; in this example we're giving the paragraph a class of 'description'</p>
+
+<pre class="prettyprint linenums languague-html">
+&lt;p class="description"&gt;This is a discription.&lt;/p&gt;
+</pre>
+
+<p>There's about 100 HTML tags but you'll really only use a subset of 30 or 40. Some common tags include:</p>
+
+<pre class="prettyprint linenums languague-html">
+&lt;h1&gt;A level one heading&lt;/h1&gt;
+&lt;title&gt;A page title&lt;/title&gt;
+&lt;label&gt;A label, used in forms&lt;/label&gt;
+&lt;div&gt;A div, basically a box&lt;/div&gt;
+</pre>
+
+<p>Some tags do not have a closing pair:</p>
+
+<pre class="prettyprint linenums languague-html">
+&lt;hr&gt;A horizonal rule (a line)
+&lt;br&gt;A line break
+</pre>
+
+<p>This will sometimes have a closing slash built into the tag: <code>&lt;br /&gt;</code></p>
+
+<p>And some require other elements to make them useful: like lists, which have a wrapping list tag and then list items:</p>
+
+<pre class="prettyprint linenums languague-html">
+&lt;ol&gt;
+    &lt;li&gt;Item One&lt;/li&gt;
+    &lt;li&gt;Item Two&lt;/li&gt;
+    &lt;li&gt;Item Three&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+
+<p>Ol is an 'ordered list' and the web browser will automatically put in numbers. An 'ul' is an unordered list, and the browser will use bullets.</p>
+
+<h2>Attributes</h2>
+
+<p>Some tags have attributes to make them more useful. They generally appear as name-value pairs, separated by "=", and are written within the start tag of an element.</p>
+
+<pre class="prettyprint linenums languague-html">
+&lt;tag attribute="value"&gt;{content to be modified by the tag}&lt;/tag&gt;
+</pre>
+
+<p>Where <code>tag</code> names the HTML element, <code>attribute</code> is the name of the attribute, set to the provided <code>value</code>.</p>
+
+<p>In this example a link (called an 'anchor') tag needs an <code>href</code> to point to another location, and an image tag needs a src for the image file.</p>
+
+<pre class="prettyprint linenums languague-html">
+&lt;a href="home.html"&gt;Link to home&lt;/a&gt;
+&lt;img src="logo.png" /&gt;
+</pre>
+
+<p>Some attributes are boolean and do not need a value:</p>
+
+<pre class="prettyprint linenums languague-html">
+&lt;option selected&gt;New Zealand&lt;/option&gt;
+</pre>
+
+<h2>Page Structure</h2>
+
+<p>A well-formed web page will have an <code>html</code> tag, a <code>head</code> tag and a <code>body</code> tag, like this:</p>
+
+<pre class="prettyprint linenums languague-html">
+&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;My web page&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;My web page&lt;/h1&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p>The <code>head</code> element doesn't contain things that are shown on the web page, but things like a page title (shown in the title bar), links to style and javascript files, metadata, etc.</p>
+
+<p>It is also a good idea to include a DOCTYPE at the very top of the page:</p>
+
+<p>Web browsers are very forgiving when it comes to 'sloppy' markup but it is a good idea to keep your web pages clean to make sure they work consistently across different platforms.</p>
+
+</div>
+</body>
+</html>

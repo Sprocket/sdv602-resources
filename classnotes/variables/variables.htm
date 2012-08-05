@@ -1,0 +1,58 @@
+<h1>PHP Variables</h1>
+
+<p>PHP is a <em>loosely typed</em> language - a variable can contain any variable type and doesn't need to be declared when setting it. The type can be changed simply by reassigning a new value. You can cast variable; that is, change the type.</p>
+
+<p>Variables do not need to be declared before being set (encouraged in OOP)</p>
+
+
+<h2>Variable Types</h2>
+
+<h3>Booleans</h3>
+
+<p>the values TRUE or FALSE (case insensetive)</p>
+
+<h3>Integers</h3>
+
+<p>Number without a decimal, including negative numbers
+maximum values are platform dependent, usually about 2 Billion
+can be specified in decimal, hexadecimal, octal or binary
+e.g. 1, -1, 1024, 0</p>
+
+<h3>Floating point numbers</h3>
+
+<p>Numbers with decimal places, also known as "floats", "doubles", or "real numbers"
+e.g. 1.234, 1.2e3, 7E-10</p>
+
+<h3>Strings</h3>
+
+<p>A series of characters quoted within single or double quote marks.
+Special characters within single quoted strings are not expanded. These include variables and whitespace.
+Symbols within double quotes will be converted to their values before returning the string to the browser.
+e.g. 'Hello, World', "antidisestablishmentarialism", "123"</p>
+
+<h3>Arrays</h3>
+
+<p>A map of associated <em>values</em> and <em>keys</em>
+In other languages these are known as list, hash table, dictionary, collection, stack, queue.
+We create an array using the 'array' keyword.
+An array may contain other arrays (a 'multi-dimensional array').
+Keys have to be integers or strings. A value can be of any type, including variables.
+e.g.
+$array0 = array( 'apple', 'banana', 'cantelop'); 
+$array1 = array( "foo" => "bar"); 
+$array3 = array( 'foobar' => array( "foo" => "bar") ); </p>
+
+<h3>Objects</h3>
+
+<p>An object is a collection of functions and variables ('methods' and 'properties').</p>
+
+<h3>Resources</h3>
+
+<p>An external resource, such as a database connectino, a directory listing, an image file, etc.</p>
+
+<h3>NULL</h3>
+
+<p>A variable that exists that has no value
+it has been assigned the constant NULL
+it has not been set to any value yet
+it has been unset()</p>

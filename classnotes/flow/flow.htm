@@ -1,0 +1,116 @@
+<h1>Control Structures</h1>
+
+<p>Conditional tests are a good way to control the flow of your application. The most commonly used test is the <strong>if</strong> construct.</p>
+
+<p><strong>If</strong> does a test and, if the test is successful (that is, if it returns a truthy value) will then execute the code within curly braces.</p>
+
+<pre class="prettyprint linenums languague-php">
+if ( test_something ) {
+    // do something
+}
+</pre>
+
+<p>Sometimes you'll want to do something when the test fails.</p>
+
+<pre class="prettyprint linenums languague-php">
+if ( test_something ) {
+    // do something
+} else {
+    // do something else
+}
+</pre>
+
+<p>For example</p>
+
+<pre class="prettyprint linenums languague-php">
+if ( $month == 'January' ) {
+    echo 'It is January';
+} else {
+    echo 'It is not January';
+}
+</pre>
+
+<p>Other times you will want to run multiple tests:</p>
+
+<p>For example</p>
+
+<pre class="prettyprint linenums languague-php">
+if ( $month == 'January' ) {
+    echo 'It is January';
+} elseif ( $month == 'February' )  {
+    echo 'It is February';
+} else {
+    echo 'It is not January or February';
+}
+</pre>
+
+<p>You can use as many <code>elseif</code>s as needed, though it will likely make some nasty looking code.</p>
+
+<h2>Numbers</h2>
+
+<p>You can use some other tests when working with numbers</p>
+
+<pre class="prettyprint linenums languague-php">
+&gt; greater than
+&lt; less than
+&gt;= greater than or equal to
+&lt;= less than or equal to
+!= does not equal (is not)
+</pre>
+
+<h2>Functions</h2>
+
+<p>You can use the result of functions in your tests too:</p>
+
+<pre class="prettyprint linenums languague-php">
+if ( isset( $variable )) {
+    // variable has been set
+}
+</pre>
+
+<p>And also test negation (notice the exclaimation mark)</p>
+
+<pre class="prettyprint linenums languague-php">
+if ( ! isset( $variable )) {
+    // variable has NOT been set
+}
+</pre>
+
+<h2>OR and AND</h2>
+
+<p>You can run multiple tests within the same if. This will test if the month is Janurary <strong>or</strong> February. It uses the 'double pipe' operator.</p>
+
+<pre class="prettyprint linenums languague-php">
+if ( $month == 'January' || $month == 'February' ) {
+    echo 'It is January or February';
+} else {
+    echo 'It is not January or February';
+}
+</pre>
+
+<p>Another option is to check for two requirements using the AND test - which is two ampersands.</p>
+
+<pre class="prettyprint linenums languague-php">
+if ( $number &gt;= 0 &amp;&amp; $number &lt;= 100 ) {
+    echo 'The number is between 1 and 100';
+} elseif ( $number &gt; 100 ) {
+    echo 'The number is greater than 100';
+} else {
+    echo 'It is a negative number. How tricky.';
+}
+</pre>
+
+<p>Note, you can place each part of the test in separate brackets. You can also substitute &amp;&amp; for AND, and || for OR:</p>
+
+<pre class="prettyprint linenums languague-php">
+if ( ($number &gt;= 1) AND ($number &lt;= 100) ) {
+    ...
+</pre>
+
+<p>You can remove the braces if each clause only have a single statement.</p>
+
+<pre class="prettyprint linenums languague-php">
+if ( $number &gt;= 0 &amp;&amp; $number &lt;= 100 ) echo 'The number is between 1 and 100';
+elseif ( $number &gt; 100 ) echo 'The number is greater than 100';
+else echo 'It is a negative number. How tricky.';
+</pre>

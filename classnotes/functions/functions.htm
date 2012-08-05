@@ -1,0 +1,132 @@
+<h1>User Defined Functions</h1>
+<p>Functions are self-contained blocks of code. A function is given a name and then can be called at any point from within your code.</p>
+
+<p>Functions are a great way to to reuse code ("DRY - don't repeat yourself") and help keep things nice and simple.</p>
+<p>We declare functions using the function keyword and then the name of the function:</p>
+
+<pre class="prettyprint linenums languague-php">
+function function_name( $arguments ) {
+	// statements;
+}
+</pre>
+
+<p>Like variables, function names follow the same rules as other labels - alphanumberic, and underscores. They can't start with a number. Unlike variables functions are not case sensitive, though it is a good idea to be consistent.</p>
+
+<p>Functions can only be defined once and can't be overloaded (that is, you can't 'extend' an existing function). They do not have to be declared before they are called.</p>
+
+
+<pre class="prettyprint linenums languague-php">
+function say_hello() {
+	echo 'Hello world';
+}
+
+say_hello(); // 'calls' the function, which echos a string
+</pre>
+
+
+<h2>Arguments</h2>
+
+<p>Arguments are values passed to a function. A function can have any number. They are passed as a comma separated list of values. They can be any expression: values, variables (of any type) and even other functions.</p>
+
+<pre class="prettyprint linenums languague-php">
+function say_hello( $person ) {
+	echo "Hello {$person}";
+}
+
+say_hello('James'); // echos 'Hello James'
+</pre>
+
+
+<h2>Default Values</h2>
+
+<p>Arguments can have default values. These are used when a value is not supplied when the function is called.</p>
+
+<pre class="prettyprint linenums languague-php">
+function say_hello( $person = 'John Doe' ) {
+	echo "Hello {$person}";
+}
+
+say_hello('James');	// echos 'Hello James'
+say_hello(); 	// echos 'Hello John Doe'
+</pre>
+
+<p>Arguments have to match the order that they're listed in and there must be the same number of arguments (unless they have a default value). Always keep default values to the right so required values are listed first.</p>
+
+
+<h2>Returning Values</h2>
+<p>Functions can send back data - using the <code>RETURN</code> statement. If no return is supplied NULL will be sent. When RETURN is called execution stops and control is passed back to the line that called the function. RETURN can be called at anytime within a function. Only one value can be sent back - use an array to return multiple values. </p>
+
+<pre class="prettyprint linenums languague-php">
+function addition($var1,$var2) {
+	$sum = $var1 + $var2;
+	return $sum;
+}
+
+echo addition(1,2);	// echos 3
+
+$my_number = addition(1,2); // assigns 3 to a variable
+echo $my_number + 4;
+</pre>
+
+
+<h2>Scope</h2>
+
+<p>Functions have <strong>scope</strong> - this means when variable values are changed within the function they have no impact on the variable value outside the function (that is, in the global scope).</p>
+
+<pre class="prettyprint linenums languague-php">
+$total = 100.00;
+function update_total( $price ) {
+	$total += $price; // adds $price to $total
+}
+update_total( 50.00 ); // $total is still 100.00
+</pre>
+
+<p>However, you can work around this by passing variables by using the <strong>global</strong> keyword:</p>
+
+<pre class="prettyprint linenums languague-php">
+$total = 100.00;
+function update_total( $price ) {
+	global $total; // meaning 'using the var $total that lives outside in the global scope'
+	$total += $price; // adds $price to $total
+}
+update_total( 50.00 ); // $total is now 150.00
+</pre>
+
+
+<p>Or by passing the variable by <strong>reference</strong> not by value:</p>
+
+<pre class="prettyprint linenums languague-php">
+$total = 100.00;
+function update_total( $price, <code>&amp;</code>$total ) {
+	// notice the ampersand before the $total argument
+	$total += $price; // adds $price to $total
+}
+update_total( 50.00, $total ); // $total is now 150.00
+</pre>
+
+
+<h2>Example function</h2>
+
+<pre class="prettyprint linenums languague-php">
+function calculate( $cost_of_item, $money ) {
+
+	$total_money = array_sum($money);
+
+	if ( $cost_of_item &lt;= $total_money ) {
+		return 'You can afford it!';
+	} else {
+		return "You can't afford it :[";
+	}
+
+} // calculate function ends
+
+$my_money = array(
+	'savings'	=> 2000,
+	'loan'		=> 2500,
+	'paycheque'	=> 500,
+	);
+
+$new_car = 5000;
+
+echo calculate($new_car, $my_money);
+</pre>

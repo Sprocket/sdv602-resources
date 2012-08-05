@@ -1,0 +1,64 @@
+<h1>Web Forms</h1>
+
+<p>Web forms are the best way to get data from visitors.</p>
+
+<h2>The Form Tag</h2>
+
+<p>We use <code>&lt;form&gt;</code> to wrap all our form elements (called 'controls'). It takes <code>action</code> and <code>method</code> attributes, which is where the form data will be sent when the form is submitted and how it will be submitted; in the example below it will be sent to 'process.php' using the 'get' method:</p>
+
+<pre class="prettyprint linenums languague-php">
+&lt;form action="process.php" method="get"&gt;
+&lt;input type="text" name="firstname" /&gt;
+&lt;input type="submit" value="Send" /&gt;
+&lt;/form&gt;
+</pre>
+
+<p>The form contains two controls: a text input and a submit button. When the user clicks the 'submit' button the page will then redirect to the 'process.php' page.</p>
+
+<h2>Input Names</h2>
+
+<p>The page recieving the form will then have the form elements as variables, though you <strong>must</strong> have a 'firstname' attribute on the form control. This will then be the name of the variable. You access the variables within a <strong>super global</strong> array. This defaults to 'get'. We access this using <code>$_GET['control_name']</code></p>
+
+<pre class="prettyprint linenums languague-php">$name = $_GET['firstname'];
+</pre>
+
+<p><strong>GET</strong> will pass the variable value as part of the URL as key-value pairs: 'process.php?firstname=John'</p>
+
+<p>The other method we use is <strong>POST</strong>, this will send the variables as a separate (and 'hidden') packet. We access POST variables from the <code>$_POST</code> super global:</p>
+
+<pre class="prettyprint linenums languague-php">
+$name = $_POST['firstname'];
+</pre>
+
+<h2>Input Types</h2>
+
+<p>There are several different form controls:</p>
+
+<p><strong>Textarea</strong> is a large text box for users to enter in chunks of text<br />
+<strong>Button</strong> is a clickable box, which you can assign javascript actions to<br />
+<strong>Select</strong> is a pop up menu</p>
+
+<p>There are also variations of the <code>input</code> type including:</p>
+
+<p><strong>Hidden</strong> that the user cannot edit<br />
+<strong>Submit</strong> a submit button<br />
+<strong>Reset</strong> that will reset the from to its initial state<br />
+<strong>Checkbox</strong> is a binary control allow the user to choose between two options</p>
+
+<p>Some controls have several options, such as pop up select menus and radio groups.</p>
+
+<pre class="prettyprint linenums languague-php">
+&lt;select name="country"&gt;
+	&lt;option value="nz" selected&gt;New Zealand&lt;/option&gt;
+	&lt;option value="aus"&gt;Australia&lt;/option&gt;
+	&lt;option value="usa"&gt;U.S.A&lt;/option&gt;
+&lt;/select&gt;
+</pre>
+
+<p>This will be rendered like this:
+<select name="country">
+	<option value="nz" selected>New Zealand</option>
+	<option value="aus">Australia</option>
+	<option value="usa">U.S.A</option>
+</select>
+</p>
