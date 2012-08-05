@@ -1,5 +1,5 @@
 <?php
-	require '../functions.php';
+	require '../inc/functions.php';
 	echo page_header();
 ?>
 <div class="container page-wrap">

@@ -1,5 +1,5 @@
 <?php
-	require '../functions.php';
+	require '../inc/functions.php';
 	echo page_header('SDV602 Resources');
 ?>
 <div class="container page-wrap">
@@ -28,16 +28,16 @@
 		<dd>PHP Documentation from php.net</dd>
 	<dt><a href="http://net.tutsplus.com/category/tutorials/php/">PHP Tutorials at NetTuts+</a></dt>
 		<dd>A variety of PHP Tuts</dd>
-	<dt>
-		<a href="http://www.phptherightway.com/">PHP The Right Way</a>
-		<dd>"an easy-to-read, quick reference for PHP best practices" (Available in a number of languages)</dd>
-	</dt>
+	<dt><a href="http://stackoverflow.com/questions/tagged/php">Stack Overflow</a></dt>
+		<dd>A great place to ask a question and see answers to others</dd>
 </dl>
 
 <h3 id="courses">Online Courses</h3>
 <dl>
 	<dt><a href="https://tutsplus.com/course/php-fundamentals/">PHP Fundamentals at TutsPlus</a></dt>
-	<dd>A great introduction to PHP (first few videos are free)</dd>
+		<dd>A great introduction to PHP (first few videos are free)</dd>
+	<dt><a href="http://www.phptherightway.com/">PHP The Right Way</a></dt>
+		<dd>"an easy-to-read, quick reference for PHP best practices" (Available in a number of languages)</dd>
 </dl>
 
 

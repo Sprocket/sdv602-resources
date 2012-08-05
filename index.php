@@ -1,5 +1,5 @@
 <?php
-	require 'functions.php';
+	require 'inc/functions.php';
 	echo page_header('SDV602 Overview');
 ?>
 <div class="container page-wrap">

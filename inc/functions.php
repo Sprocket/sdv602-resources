@@ -19,7 +19,7 @@ function page_header( $title = 'sdv602'){
 	<meta charset="utf-8" />
 	<title>'.$title.'</title>
 </head>
-	<link rel="stylesheet" href="'.BASE_URL.'/assets/css/sitewide.css">
+	<link rel="stylesheet" href="'.BASE_URL.'/inc/css/sitewide.css">
 </head>
 <body>'
 . main_nav();
@@ -29,9 +29,9 @@ function page_footer(){
 	return '<footer class="container"><small>&copy; Freefall Media Ltd. All rights reserved. May not be redistributed without permission</small>
 	</footer>
 
-	<script src="'.BASE_URL.'/assets/js/jquery-1.7.2.min.js"></script>
-	<script src="'.BASE_URL.'/assets/js/bootstrap.js"></script>
-	<script src="'.BASE_URL.'/assets/js/prettify.js"></script>
+	<script src="'.BASE_URL.'/inc/js/jquery-1.7.2.min.js"></script>
+	<script src="'.BASE_URL.'/inc/js/bootstrap.js"></script>
+	<script src="'.BASE_URL.'/inc/js/prettify.js"></script>
 <script type="text/javascript">
 prettyPrint();
 
