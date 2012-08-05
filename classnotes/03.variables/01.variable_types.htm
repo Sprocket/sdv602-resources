@@ -7,52 +7,59 @@
 
 <h2>Variable Types</h2>
 
-<h3>Booleans</h3>
+<h4>Booleans</h4>
 
 <p>the values TRUE or FALSE (case insensetive)</p>
 
-<h3>Integers</h3>
+<h4>Integers</h4>
 
 <p>Number without a decimal, including negative numbers
 maximum values are platform dependent, usually about 2 Billion
 can be specified in decimal, hexadecimal, octal or binary
-e.g. 1, -1, 1024, 0</p>
+<br />e.g.<code>1, -1, 1024, 0</code></p>
 
-<h3>Floating point numbers</h3>
+<h4>Floating point numbers</h4>
 
 <p>Numbers with decimal places, also known as "floats", "doubles", or "real numbers"
-e.g. 1.234, 1.2e3, 7E-10</p>
+<br>e.g. <code>1.234, 1.2e3, 7E-10</code></p>
 
-<h3>Strings</h3>
+<h4>Strings</h4>
 
 <p>A series of characters quoted within single or double quote marks.
 Special characters within single quoted strings are not expanded. These include variables and whitespace.
 Symbols within double quotes will be converted to their values before returning the string to the browser.
-e.g. 'Hello, World', "antidisestablishmentarialism", "123"</p>
+<br>e.g. <code> 'Hello, World', "antidisestablishmentarialism", "123"</code></p>
 
-<h3>Arrays</h3>
+<h4>Arrays</h4>
 
 <p>A map of associated <em>values</em> and <em>keys</em>
-In other languages these are known as list, hash table, dictionary, collection, stack, queue.
-We create an array using the 'array' keyword.
+In other languages these are known as list, hash table, dictionary, collection, stack, etc.
+We create an array using the <code>array</code> keyword.
 An array may contain other arrays (a 'multi-dimensional array').
-Keys have to be integers or strings. A value can be of any type, including variables.
-e.g.
-$array0 = array( 'apple', 'banana', 'cantelop'); 
-$array1 = array( "foo" => "bar"); 
-$array3 = array( 'foobar' => array( "foo" => "bar") ); </p>
+Keys have to be integers or strings. A value can be of any type, including variables.</p>
 
-<h3>Objects</h3>
+<pre class="prettyprint linenums languague-php">
+// a one dimensional array
+array( 'apple', 'banana', 'cantelop');
+// a associative array 
+array( "foo" => "bar"); 
+// a multidimensional array (an array of arrays)
+array( 'foobar' => array( "foo" => "bar") ); </p>
+</pre>
+
+<h4>Objects</h4>
 
 <p>An object is a collection of functions and variables ('methods' and 'properties').</p>
 
-<h3>Resources</h3>
+<h4>Resources</h4>
 
 <p>An external resource, such as a database connectino, a directory listing, an image file, etc.</p>
 
-<h3>NULL</h3>
+<h4>NULL</h4>
 
-<p>A variable that exists that has no value
-it has been assigned the constant NULL
-it has not been set to any value yet
-it has been unset()</p>
+<p>A variable that exists that has no value or:</p>
+<ul>
+<li>it has been assigned the constant NULL</li>
+<li>it has not been set to any value yet</li>
+<li>it has been unset()</li>
+</ul>

@@ -69,42 +69,6 @@ echo $my_number + 4;
 </pre>
 
 
-<h2>Scope</h2>
-
-<p>Functions have <strong>scope</strong> - this means when variable values are changed within the function they have no impact on the variable value outside the function (that is, in the global scope).</p>
-
-<pre class="prettyprint linenums languague-php">
-$total = 100.00;
-function update_total( $price ) {
-	$total += $price; // adds $price to $total
-}
-update_total( 50.00 ); // $total is still 100.00
-</pre>
-
-<p>However, you can work around this by passing variables by using the <strong>global</strong> keyword:</p>
-
-<pre class="prettyprint linenums languague-php">
-$total = 100.00;
-function update_total( $price ) {
-	global $total; // meaning 'using the var $total that lives outside in the global scope'
-	$total += $price; // adds $price to $total
-}
-update_total( 50.00 ); // $total is now 150.00
-</pre>
-
-
-<p>Or by passing the variable by <strong>reference</strong> not by value:</p>
-
-<pre class="prettyprint linenums languague-php">
-$total = 100.00;
-function update_total( $price, <code>&amp;</code>$total ) {
-	// notice the ampersand before the $total argument
-	$total += $price; // adds $price to $total
-}
-update_total( 50.00, $total ); // $total is now 150.00
-</pre>
-
-
 <h2>Example function</h2>
 
 <pre class="prettyprint linenums languague-php">

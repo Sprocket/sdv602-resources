@@ -6,6 +6,7 @@ define('BASE_URL', '/_nmit/sdv602-resources');
 $sections = array(
 	"Class notes"		=> "/classnotes/",
 	"Resources" 		=> "/resources/",
+	"Examples"			=> "/examples/"
 
 	);
 
@@ -27,9 +28,24 @@ function page_header( $title = 'sdv602'){
 function page_footer(){
 	return '<footer class="container"><small>&copy; Freefall Media Ltd. All rights reserved. May not be redistributed without permission</small>
 	</footer>
-	<script type="text/javascript" src="'.BASE_URL.'/assets/js/prettify.js"></script>
+
+	<script src="'.BASE_URL.'/assets/js/jquery-1.7.2.min.js"></script>
+	<script src="'.BASE_URL.'/assets/js/bootstrap.js"></script>
+	<script src="'.BASE_URL.'/assets/js/prettify.js"></script>
 <script type="text/javascript">
 prettyPrint();
+
+$("a").each(function() {
+  var a = new RegExp("/" + window.location.host + "/");
+    if(!a.test(this.href)) {
+    $(this).click(function(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      window.open(this.href, "_blank");
+    });
+  }
+});
+
 </script>
 </body>
 </html>

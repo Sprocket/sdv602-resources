@@ -34,31 +34,35 @@ You then put your code between them, like this</p>
 
 <h2>Comments</h2>
 
-<p>There are three types of comments in PHP.</p>
+<p>The PHP engine ignores comments - they're meant for humans to read. Use them to</p>
+<ul>
+	<li>explain what you are doing when it is not obvious or unconventional</li>
+	<li>make a note to others; mark a TODO, FIXME, etc.</li>
+	<li>temporary disable code when debugging</li>
+</ul>
 
-<p>Single line comments
-    // This comment will run across one line (generally preferred)
-    # As will this one</p>
+<p>There are three types of comments in PHP. Two single line comments that work on single lines:</p>
+
+<pre class="prettyprint linenums languague-php">
+// This comment will run across one line (generally preferred)
+# As will this one
+</pre>
 
 <p>And mutli-line comments</p>
-
-<pre class="prettyprint linenums languague-php">/*
+<pre class="prettyprint linenums languague-php">
+/*
 This comment will run across
 several lines
 */
 </pre>
 
-<p>Use them
-* to explain what you are doing when it is not obvious
-* when you are doing something non-conventional
-* to make a note to others; mark a TODO, etc.
-* to temporary disable code</p>
 
-<h2>Examples</h2>
+<h2>Code examples</h2>
 
 <pre class="prettyprint linenums languague-php">$variable = 'hello';    // assigns a value to a variable
 echo 4 + $;             // 8
 die('I am dead');       // halts execution with a message
 myFunction();           // calls a function
-echo date('l, F dS Y'); // Saturday, July 14th 2012
+echo date('l, F dS Y'); // prints the result of a function with passed arguments: 
+			// Saturday, July 14th 2012
 </pre>
