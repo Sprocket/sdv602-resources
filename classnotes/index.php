@@ -12,7 +12,7 @@
 if ( isset($_GET['page'])) {
 	$page = $_GET['page'];
 } else {
-	$page = "intro/intro.htm";
+	$page = "01.intro/01.intro.htm";
 }
 
 echo sub_nav('*',$page);

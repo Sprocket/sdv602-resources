@@ -25,7 +25,9 @@ function page_header( $title = 'sdv602'){
 }
 
 function page_footer(){
-	return '<script type="text/javascript" src="'.BASE_URL.'/assets/js/prettify.js"></script>
+	return '<footer class="container"><small>&copy; Freefall Media Ltd. All rights reserved. May not be redistributed without permission</small>
+	</footer>
+	<script type="text/javascript" src="'.BASE_URL.'/assets/js/prettify.js"></script>
 <script type="text/javascript">
 prettyPrint();
 </script>
@@ -46,14 +48,9 @@ function main_nav(){
       <li><a class="brand" href="'.BASE_URL.'">SDV602 PHP</a></li>';
 
       foreach ($sections as $title => $url) {
-      	
       	$nav .= sprintf('<li><a href="'.BASE_URL.'%s">%s</a></li>', $url, $title);
-
       }
-              // <li class=""><a class="brand" href="'.BASE_URL.'">SDV602 PHP</a></li>
-              // <li class=""><a href="'.BASE_URL.'">Overview</a></li>
-              // <li class=""><a href="'.BASE_URL.'/notes/">Notes</a></li>
-              // <li class=""><a href="'.BASE_URL.'/resources/">Resources</a></li>
+
     $nav .= '</div>
   </div>
 </div>';
@@ -71,8 +68,7 @@ function sub_nav($directory, $current = NULL) {
 
 	foreach ($directories as $dir) {
 
-		// echo "<h6>{$dir}</h6><ul class=\"nav nav-tabs nav-stacked\">";
-		$subnav .= "<li class=\"nav-header\">{$dir}</li>";
+		$subnav .= "<li class=\"nav-header\">".clean_linktext($dir)."</li>";
 
 		$files = glob("$dir/*.htm");
 
@@ -84,12 +80,17 @@ function sub_nav($directory, $current = NULL) {
 			$subnav .= "<a href=\"index.php?page="
 			. $file
 			. "\">"
-			. basename($file,'.htm')
+			. clean_linktext($file)
 			. '</a></li>';
 		}
 
 	}
 
 	return $subnav . '</ol>';
+}
+
+function clean_linktext( $link_text ) {
+	$cleaned = preg_replace("/[0-9.]/", "", basename($link_text,'.htm'));
+	return str_replace('_', ' ', $cleaned);
 }
 
