@@ -10,10 +10,12 @@ define('BASE_URL', '/_nmit/sdv602-resources');
 	used in main navigation */
 define('PROJ_NAME', 'SDV602 PHP');
 
-/*	PROJECT NAME
-	the name of the project
-	used in main navigation */
-define('SHOW_NOTES', TRUE);
+/*	NOTES
+	
+	can be FALSE, 'SHOW', 'EDIT' */
+// define('SHOW_NOTES', FALSE);
+// define('SHOW_NOTES', 'SHOW');
+define('SHOW_NOTES', 'EDIT');
 
 
 

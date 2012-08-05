@@ -24,6 +24,7 @@ function page_footer(){
 	<script src="'.BASE_URL.'/inc/js/jquery-1.7.2.min.js"></script>
 	<script src="'.BASE_URL.'/inc/js/bootstrap.js"></script>
 	<script src="'.BASE_URL.'/inc/js/prettify.js"></script>
+	<script src="'.BASE_URL.'/inc/redactor/redactor.min.js"></script>
 	<script src="'.BASE_URL.'/inc/js/sitewide.js"></script>
 </body>
 </html>
@@ -89,3 +90,37 @@ function clean_linktext( $link_text ) {
 	return str_replace('_', ' ', $cleaned);
 }
 
+/* MESSAGES */
+function show_msg( $msg ) {
+
+	$alert = sprintf('<div class="alert alert-%s">%s</div>',
+		$msg[0],
+		$msg[1]
+		);
+
+	return $alert;
+
+}
+
+
+/* EDITOR FUNCTIONS */
+
+function edit_form( $page ){
+
+	$form = "<form action=\"\" method=\"post\">
+	<input type=\"hidden\" value=\"{$page}\" id=\"editor_page\" name=\"editor_page\">
+	<textarea id=\"editor_content\" name=\"editor_content\">"	. file_get_contents($page) . "</textarea>";
+
+	$form .= "<div id=\"editor-buttons\"><a href=\"index.php\" class=\"btn\">Cancel</a><input type=\"submit\" class=\"btn btn-primary\" value=\"save\"></div></form>";
+
+	return $form;
+}
+
+
+function save_notes( $page, $content ){
+
+	return TRUE;
+	return file_put_contents($page, $content);
+
+
+}

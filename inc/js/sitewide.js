@@ -10,3 +10,5 @@ $("a").each(function() {
     });
   }
 });
+
+$('#editor_content').redactor({ focus: false });
