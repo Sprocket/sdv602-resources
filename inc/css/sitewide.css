@@ -1,6 +1,12 @@
+/* include bootstrap and prettify style sheets */
 @import 'bootstrap.min.css';
 @import 'prettify.css';
 
+/* * * * * * * * * * * * * * * * * * * * * * * * * *
+	following styles will override those above
+ * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* page structure */
 html p {
 	font-size: 1.1em;
 	line-height: 1.4em;
@@ -11,6 +17,12 @@ body {
 	background: #fbfbfb;
 	padding: 60px 0 0 0;
 }
+.page-wrap {
+	background: #fff;
+	padding: 0px;
+}
+
+/* footer */
 footer {
 	margin: 60px auto 0;
 	padding: .5em;
@@ -22,10 +34,8 @@ footer small {
 footer small:hover {
 	color: #222;
 }
-.page-wrap {
-	background: #fff;
-	padding: 0px;
-}
+
+/* headers */
 h1 {
 	margin: 0 0 .8em 0 ;
 	padding: .3em 0;
@@ -44,6 +54,8 @@ h3 {
 	font-size: 2em;
 	margin: 1em 0 0;
 }
+
+/* nav bar */
 .navbar .nav > li > a {
 	color: #fff;
 	font-weight: bold;

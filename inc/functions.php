@@ -1,16 +1,8 @@
 <?php
 
-define('BASE_URL', '/_nmit/sdv602-resources');
+require 'configs.php';
 
-
-$sections = array(
-	"Class notes"		=> "/classnotes/",
-	"Resources" 		=> "/resources/",
-	"Examples"			=> "/examples/"
-
-	);
-
-
+// PAGE FUNCTIONS
 
 function page_header( $title = 'sdv602'){
 	return '<!doctype html>
@@ -32,28 +24,14 @@ function page_footer(){
 	<script src="'.BASE_URL.'/inc/js/jquery-1.7.2.min.js"></script>
 	<script src="'.BASE_URL.'/inc/js/bootstrap.js"></script>
 	<script src="'.BASE_URL.'/inc/js/prettify.js"></script>
-<script type="text/javascript">
-prettyPrint();
-
-$("a").each(function() {
-  var a = new RegExp("/" + window.location.host + "/");
-    if(!a.test(this.href)) {
-    $(this).click(function(event) {
-      event.preventDefault();
-      event.stopPropagation();
-      window.open(this.href, "_blank");
-    });
-  }
-});
-
-</script>
+	<script src="'.BASE_URL.'/inc/js/sitewide.js"></script>
 </body>
 </html>
 ';
 }
 
 
-
+// NAVIGATION FUNCTIONS
 function main_nav(){
 	global $sections;
 
@@ -61,7 +39,7 @@ function main_nav(){
   <div class="navbar-inner">
     <div class="container">
       <ul class="nav">
-      <li><a class="brand" href="'.BASE_URL.'">SDV602 PHP</a></li>';
+      <li><a class="brand" href="'.BASE_URL.'">'.PROJ_NAME.'</a></li>';
 
       foreach ($sections as $title => $url) {
       	$nav .= sprintf('<li><a href="'.BASE_URL.'%s">%s</a></li>', $url, $title);
@@ -105,6 +83,7 @@ function sub_nav($directory, $current = NULL) {
 	return $subnav . '</ol>';
 }
 
+// LINK FUNCTIONS
 function clean_linktext( $link_text ) {
 	$cleaned = preg_replace("/[0-9.]/", "", basename($link_text,'.htm'));
 	return str_replace('_', ' ', $cleaned);
