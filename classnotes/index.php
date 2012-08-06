@@ -2,31 +2,29 @@
 	require '../inc/functions.php';
 
 
+// save notes if present
 if ( isset( $_POST['editor_page']) ){
-
 	$msg = ( save_notes( $_POST['editor_page'], $_POST['editor_content']) )
 		? array( 'success','notes saved')
 		: array( 'error','there was a problem saving your notes');
 }
 
-	echo page_header();
+// set $page var
+$page = ( isset($_GET['page'])) ? $_GET['page'] : DEFAULT_NOTE;
+
+	echo page_header( $page );
 ?>
 <div class="container page-wrap">
 <div class="row">
 
-<div class="span3">
+<div class="span3" id="sub-nav">
 
 <?php
-
-if ( isset($_GET['page'])) {
-	$page = $_GET['page'];
-} else {
-	$page = "01.intro/01.intro.htm";
-}
 
 echo sub_nav('*',$page);
 
 ?>
+<a href="#" class="btn" id="nav-hide">hide</a>
 </div>		
 
 <div class="page-content span9">
@@ -38,19 +36,7 @@ if ( isset($msg) ) echo show_msg($msg);
 
 include "{$page}";
 
-if ( SHOW_NOTES == 'EDIT'){
-
-	$notes = '../_notes/'.$page;
-
-	if ( file_exists( $notes )){
-		echo '<div id="notes">';
-
-		echo edit_form( $notes );
-		// include $notes;
-		echo '</div>';
-	}
-
-}
+echo process_notes( $page );
 
 ?>
 </div>

@@ -10,12 +10,22 @@ define('BASE_URL', '/_nmit/sdv602-resources');
 	used in main navigation */
 define('PROJ_NAME', 'SDV602 PHP');
 
+/*	DEFAULT NOTE
+	class note to show by default */
+define('DEFAULT_NOTE', '01.intro/01.intro.htm');
+
 /*	NOTES
-	
-	can be FALSE, 'SHOW', 'EDIT' */
+	sets note making mode
+	FALSE	- note making system is not used
+	'SHOW'	- shows user notes at the bottom of the page
+	'EDIT'	- shows the note editor
+*/
 // define('SHOW_NOTES', FALSE);
 // define('SHOW_NOTES', 'SHOW');
 define('SHOW_NOTES', 'EDIT');
+
+
+
 
 
 

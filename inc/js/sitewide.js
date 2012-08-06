@@ -12,3 +12,7 @@ $("a").each(function() {
 });
 
 $('#editor_content').redactor({ focus: false });
+
+$('#nav-hide').on('click', function(){
+	$("#sub-nav").fadeOut('slow');
+});

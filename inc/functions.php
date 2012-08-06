@@ -4,12 +4,12 @@ require 'configs.php';
 
 // PAGE FUNCTIONS
 
-function page_header( $title = 'sdv602'){
+function page_header( $title = ''){
 	return '<!doctype html>
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<title>'.$title.'</title>
+	<title>'.PROJ_NAME.' - '.$title.'</title>
 </head>
 	<link rel="stylesheet" href="'.BASE_URL.'/inc/css/sitewide.css">
 </head>
@@ -116,11 +116,59 @@ function edit_form( $page ){
 	return $form;
 }
 
+function make_note( $notes_file ){
+// echo $notes_file; // ../_notes/01.intro/lamp.htm
+// echo getcwd(); // /Library/WebServer/Documents/_nmit/sdv602-resources/classnotes
+	// touch($notes_file);
+
+	$path = pathinfo($notes_file);
+
+	if(! is_dir($path['dirname'])) mkdir( $path['dirname'] , 0777);
+
+	// file_put_contents($notes_file, '');
+	touch($notes_file);
+	chmod($notes_file,0777); 
+
+	// return edit_form( $notes_file );
+	$notes = '<div id="notes">'
+	. edit_form( $notes_file )
+	. '</div>';
+	return $notes;
+}
+
 
 function save_notes( $page, $content ){
 
-	return TRUE;
 	return file_put_contents($page, $content);
 
+}
+
+
+function process_notes( $page ){
+
+	if (SHOW_NOTES == FALSE) return;
+
+	$notes_file = '../_notes/'.$page;
+
+	if (SHOW_NOTES == 'SHOW'){
+		if ( file_exists( $notes_file )){
+			$notes = '<div id="notes">'
+			. file_get_contents($notes_file)
+			. '</div>';
+			return $notes;
+		} else return '<p>[no user notes]</p>';
+	}
+
+	if ( SHOW_NOTES == 'EDIT'){
+
+		if ( file_exists( $notes_file )){
+			$notes = '<div id="notes">'
+			. edit_form( $notes_file )
+			. '</div>';
+			return $notes;
+		} else return make_note( $notes_file );
+
+	}
 
 }
+
