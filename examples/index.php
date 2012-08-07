@@ -20,6 +20,9 @@
 <h3>Ajax Quotes</h3>
 <p>A single page, ajax driven app that showed random quotes.</p>
 
+<h3>Form Helper</h3>
+<p>A collection of function to help make HTML forms quickly. <a href="form_helper.php">The plan</a></p>
+
 </div>
 </div><!-- row -->
 </div><!-- page-wrap -->

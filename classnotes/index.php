@@ -24,7 +24,7 @@ $page = ( isset($_GET['page'])) ? $_GET['page'] : DEFAULT_NOTE;
 echo sub_nav('*',$page);
 
 ?>
-<a href="#" class="btn" id="nav-hide">hide</a>
+<a href="#" class="btn btn-mini" id="nav-hide" accesskey="n">hide</a>
 </div>		
 
 <div class="page-content span9">
@@ -35,6 +35,8 @@ if ( isset($msg) ) echo show_msg($msg);
 
 
 include "{$page}";
+
+if ( EDIT_CLASS_NOTES ) echo edit_note_link($page);
 
 echo process_notes( $page );
 

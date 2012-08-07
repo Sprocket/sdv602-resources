@@ -12,7 +12,7 @@ define('PROJ_NAME', 'SDV602 PHP');
 
 /*	DEFAULT NOTE
 	class note to show by default */
-define('DEFAULT_NOTE', '01.intro/01.intro.htm');
+define('DEFAULT_NOTE', '00.intro/01.intro.htm');
 
 /*	NOTES
 	sets note making mode
@@ -20,11 +20,14 @@ define('DEFAULT_NOTE', '01.intro/01.intro.htm');
 	'SHOW'	- shows user notes at the bottom of the page
 	'EDIT'	- shows the note editor
 */
-// define('SHOW_NOTES', FALSE);
+define('SHOW_NOTES', FALSE);
 // define('SHOW_NOTES', 'SHOW');
-define('SHOW_NOTES', 'EDIT');
+// define('SHOW_NOTES', 'EDIT');
 
 
+/*	EDIT CLASS NOTES
+	whether to show edit button */
+define('EDIT_CLASS_NOTES', FALSE );
 
 
 

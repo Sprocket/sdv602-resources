@@ -1,0 +1,52 @@
+<h1>Switch statements</h1>
+
+<p>Switch statements are similar to <code>IF</code> statements but can be a more elegant solution to making multiple tests.</p>
+
+<p>The are limited to a single test but tend to be a better solution to multiple <code>IF</code> and <code>IF ELSE</code> clauses.</p>
+
+<pre class="prettyprint linenums languague-php">
+$fav_fruit = &quot;apple&quot;;
+
+switch ( $fav_fruit ) {
+	
+	case &#039;banana&#039; :
+		echo &#039;Monkies like bananas too!&#039;;
+		break;
+
+	case &#039;grapes&#039; :
+		echo &#039;Mmmm, grapes&#039;;
+		break;
+
+	case &#039;apple&#039; :
+		echo &#039;Yay, apples are tasty!&#039;;
+		break;
+
+	default :
+		echo &#039;You like some strange food my friend&#039;;
+
+}
+// echos 'Yay, apples are tasty!'
+</pre>
+
+<p><strong>Break</strong> statements stop control from cascading down the structure. When a case is truthy all code below it will be executed. This can be sometimes be useful:</p>
+
+<pre class="prettyprint linenums languague-php">
+
+$fav_tvshow = &#039;MacGyver&#039;;
+
+switch ( $fav_tvshow) {
+	case &#039;The A Team&#039;:
+	case &#039;MacGyver&#039;:
+	case &#039;KnightRider&#039;:
+	case &#039;That\&#039;s Incredible&#039;:
+		echo &#039;That is a great show.&#039;;
+		break;
+	
+	default:
+		echo &#039;Yeah, not one of my favourites.&#039;;
+		break;
+}
+// echos 'That is a great show.'
+</pre>
+
+<p><a href="http://nz.php.net/manual/en/control-structures.switch.php">PHP Docs: switch</a></p>

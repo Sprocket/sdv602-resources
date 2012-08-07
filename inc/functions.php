@@ -172,3 +172,8 @@ function process_notes( $page ){
 
 }
 
+
+function  edit_note_link($page) {
+	$edit_link = sprintf('<p><a href="%s/edit.php?page=%s" class="btn">edit</a></p>',BASE_URL,$page);
+	return $edit_link;
+}

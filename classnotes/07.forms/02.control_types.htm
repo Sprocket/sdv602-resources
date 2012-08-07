@@ -1,0 +1,182 @@
+<h1>Input Types</h1>
+
+<p>There are several different form controls:</p>
+
+<h3>Labels</h3>
+<p>Each form control can have a <code>label</code> associated with it. You can either wrap the control in the label or use the 'for' attribute</p>
+
+<pre class="prettyprint linenums languague-php">
+&lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt; Click me&lt;/label&gt;
+&lt;input type=&quot;checkbox&quot; id=&quot;clickmetoo&quot;&gt;
+&lt;label for=&quot;clickmetoo&quot;&gt;Click me too&lt;/label&gt;
+</pre>
+
+<form>
+<label><input type="checkbox"> Click me</label>
+<input type="checkbox" id="clickmetoo">
+<label for="clickmetoo">Click me too</label>
+</form>
+
+<h3>Input</h3>
+<p>There are several different types of inputs, each with their own features. The most common, and default type, is text.</p>
+<h4>Text</h4>
+<pre class="prettyprint linenums languague-php">
+&lt;input type=&quot;text&quot; value=&quot;Your name&quot; /&gt;
+</pre>
+<input type="text" value="Your name" />
+
+<p>There are several attributes you can use, such as title, required, id, name and placeholder.</p>
+
+<pre class="prettyprint linenums languague-php">
+&lt;form onSubmit=&quot;alert(&#039;submitted!&#039;);return false&quot;&gt;
+&lt;input type=&quot;text&quot; required placeholder=&quot;Your name&quot; title=&quot;please enter your name&quot; name=&quot;name&quot; id=&quot;name&quot;&gt;
+&lt;/form&gt;
+</pre>
+
+<form onSubmit="alert('submitted!');return false">
+<input type="text" required placeholder="Your name" title="please enter your name" name="name" id="name">
+</form>
+
+<h4>Hidden</h4>
+<p>Hidden inputs will appear in your PHP as variables but aren't usually edited by the user. They're a good way of passing variables from page to page.</p>
+<pre class="prettyprint linenums languague-php">
+&lt;input type=&quot;hidden&quot; name=&quot;secret_var&quot; value=&quot;secret&quot;&gt;
+</pre>
+
+
+<h4>Password</h4>
+<p>Password fields work largely like text inputs but will convert input to bullets</p>
+<pre class="prettyprint linenums languague-php">
+&lt;input type=&quot;password&quot; value="123"&gt;
+</pre>
+<form><input type="password" value="123"></form>
+	
+
+<h4>Submit</h4>
+<p>These are buttons used to submit a form</p>
+<pre class="prettyprint linenums languague-php">
+&lt;input type=&quot;submit&quot; value=&quot;Send Form&quot;&gt;
+</pre>
+<form><input type="submit" value="Send Form"></form>
+
+<h4>Reset</h4>
+<p>Reset buttons work a lot like submit but they will reset the form to its default values if any were set.</p>
+<pre class="prettyprint linenums languague-php">
+&lt;input type=&quot;reset&quot; value=&quot;Clear Form&quot;&gt;
+</pre>
+<form><input type="reset" value="Clear Form"></form>
+
+
+<h4>Checkbox</h4>
+<p>These will let you check any number of items.</p>
+<pre class="prettyprint linenums languague-php">
+&lt;label&gt;&lt;input type=&quot;checkbox&quot; value=&quot;cats&quot; name=&quot;catperson&quot;&gt; I am a cat person&lt;/label&gt;
+&lt;label&gt;&lt;input type=&quot;checkbox&quot; value=&quot;dogs&quot; name=&quot;dogperson&quot;&gt; I am a dog person&lt;/label&gt;
+</pre>
+<form>
+<label><input type="checkbox" value="cats" name="catperson"> I am a cat person</label>
+<label><input type="checkbox" value="dogs" name="dogperson"> I am a dog person</label>
+</form>
+
+<h3>Buttons</h3>
+<p>Buttons are clickable boxes, which you can assign javascript actions to. They can be used to submit forms but are generally used for such things as video controls, etc. You can put images within buttons, though browser styling can be difficult.</p>
+<pre class="prettyprint linenums languague-php">
+&lt;button onClick=&quot;alert(&#039;click!&#039;)&quot; class=&quot;btn&quot;&gt;Click me!&lt;/button&gt;
+</pre>
+<p><button onClick="alert('click!')" class="btn" >Click me!</button></p>
+
+<h3>Radio</h3>
+<p>Radio buttons will let you select only one of a group of options. It uses the 'name' attribute to make groups.</p>
+<p>In this example we've used a <code>label</code> to wrap each radio button. Though this isn't necessary it is a good idea.</p>
+<pre class="prettyprint linenums languague-php">
+&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;male&quot; /&gt; Male&lt;/label&gt;
+&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;female&quot; /&gt; Female&lt;/label&gt;
+&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;gender&quot; value=&quot;other&quot; /&gt; Other&lt;/label&gt;
+</pre>
+<form>
+<label><input type="radio" name="gender" value="male" /> Male</label>
+<label><input type="radio" name="gender" value="female" /> Female</label>
+<label><input type="radio" name="gender" value="other" /> Other</label>
+</form>
+
+<h3>Textarea</h3>
+<p>Textareas are the larger text boxes used to enter longer blocks of text</p>
+<pre class="prettyprint linenums languague-php">
+&lt;textarea name=&quot;your_message&quot; id=&quot;&quot; cols=&quot;10&quot; rows=&quot;10&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.&lt;/textarea&gt;
+</pre>
+<form>
+<textarea name="your_message" cols="20" rows="10">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.</textarea>
+</form>
+
+<h3>Fieldset</h3>
+<p>These allow you separate your forms into sections. Valid HTML requires form inputs to be within block level elements and fieldsets are a great way of doing this.</p>
+<p>You can also use them in conjunction with <code>legend</code> elements to make headings:</p>
+
+<pre class="prettyprint linenums languague-php">
+&lt;form&gt;
+	&lt;fieldset&gt;
+		&lt;legend&gt;My Form&lt;/legend&gt;
+		&lt;input type=&quot;text&quot; placeholder=&quot;your name&quot;&gt;
+		&lt;input type=&quot;submit&quot; class=&quot;btn&quot;&gt;
+	&lt;/fieldset&gt;
+&lt;/form&gt;
+</pre>
+
+<form>
+	<fieldset>
+		<legend>My Form</legend>
+		<input type="text" placeholder="your name">
+		<input type="submit" class="btn">
+	</fieldset>
+</form>
+
+
+<h3>Select</h3>
+
+<pre class="prettyprint linenums languague-php">
+&lt;select name="country"&gt;
+	&lt;option value="nz" selected&gt;New Zealand&lt;/option&gt;
+	&lt;option value="aus"&gt;Australia&lt;/option&gt;
+	&lt;option value="usa"&gt;U.S.A&lt;/option&gt;
+	&lt;option value=&quot;gb&quot;&gt;Great Britain&lt;/option&gt;
+	&lt;option value=&quot;in&quot;&gt;India&lt;/option&gt;
+	&lt;option value=&quot;jp&quot;&gt;Japan&lt;/option&gt;
+&lt;/select&gt;
+</pre>
+
+<form>
+<select name="country">
+	<option value="nz" selected>New Zealand</option>
+	<option value="aus">Australia</option>
+	<option value="usa">U.S.A</option>
+	<option value="gb">Great Britain</option>
+	<option value="in">India</option>
+	<option value="jp">Japan</option>
+</select>
+<form>
+
+<p>You can let users select more options by including the <code>multiple</code> attribute.</p>
+
+<pre class="prettyprint linenums languague-php">
+&lt;select name=&quot;country&quot; multiple=&quot;multiple&quot;&gt;
+	&lt;option value=&quot;nz&quot; selected&gt;New Zealand&lt;/option&gt;
+	&lt;option value=&quot;aus&quot;&gt;Australia&lt;/option&gt;
+	&lt;option value=&quot;usa&quot;&gt;U.S.A&lt;/option&gt;
+	&lt;option value=&quot;gb&quot;&gt;Great Britain&lt;/option&gt;
+	&lt;option value=&quot;in&quot; selected&gt;India&lt;/option&gt;
+	&lt;option value=&quot;jp&quot;&gt;Japan&lt;/option&gt;
+&lt;/select&gt;
+</pre>
+
+<form>
+<select name="country" multiple="multiple">
+	<option value="nz" selected>New Zealand</option>
+	<option value="aus">Australia</option>
+	<option value="usa">U.S.A</option>
+	<option value="gb">Great Britain</option>
+	<option value="in" selected>India</option>
+	<option value="jp">Japan</option>
+</select>
+<form>

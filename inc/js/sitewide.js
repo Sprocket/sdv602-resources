@@ -11,8 +11,15 @@ $("a").each(function() {
   }
 });
 
-$('#editor_content').redactor({ focus: false });
+$('#editor_content').redactor({
+		focus: false,
+		cleanUp: false,
+		removeClasses: false,
+	});
 
-$('#nav-hide').on('click', function(){
-	$("#sub-nav").fadeOut('slow');
+$('#nav-hide').on('click', function(e){
+	e.preventDefault();
+  $("#sub-nav").hide('slow');
+  $(".navbar").slideUp();
+	// $("#sub-nav, .navbar").hide('slow');
 });

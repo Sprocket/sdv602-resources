@@ -1,0 +1,46 @@
+<h1>Formatting Strings</h1>
+
+<h2>printf</h2>
+<p>One way to format strings is to use the <code>printf</code> function.</p>
+
+
+<pre class="prettyprint linenums languague-php">
+$template = &quot;My favourite pet is a %s, her name is %s&quot;;
+printf( $template, &#039;cat&#039;, &#039;Samantha&#039;);
+</pre>
+
+<p>This will print "My favourite pet is a cat, her name is Samantha".</p>
+
+<p>The template can contain any number of placeholders. They are matched in order with passed values. There must be the same number of values as placeholders.</p>
+
+<p>The placeholders can be of different types and are denoted by a percent sign.</p>
+
+<table class="table table-striped">
+<thead><tr><th>Specifier</th><th>Meaning</th></tr></thead>
+<tbody>
+<tr><th>%s</th><td>String</td></tr>
+<tr><th>%d</th><td>Decimal</td></tr>
+<tr><th>%f</th><td>Float</td></tr>
+</tbody>
+</table>
+
+<p>You can use HTML tags within the template</p>
+
+<p>One of the more powerful features is formatting output. Using the template of "%.2f" will give us this:</p>
+
+<pre class="prettyprint linenums languague-php">
+printf(&#039;%.2f&#039;, 1); // 1.00
+</pre>
+
+<table class="table table-striped">
+<thead><tr><th>Input</th><th>Output</th></tr></thead>
+<tbody>
+<tr><th>1</th><td>1.00</td></tr>
+<tr><th>.9</th><td>0.90</td></tr>
+<tr><th>1234</th><td>1234.00</td></tr>
+</tbody>
+</table>
+
+<p>The result will be printed immediately to the browser. If you want to store the result in a variable use the related function <code>sprintf</code></p>
+
+<p><a href="http://nz.php.net/manual/en/function.sprintf.php">PHP Docs: sprintf</a></p>
