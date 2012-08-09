@@ -55,6 +55,30 @@
 		<dd>Returns an HTML table showing the results of the submitted form. It will accept an <code>array</code> parameter (that is, the super global containing the form).</dd>
 </dl>
 
+
+<h2>Extras</h2>
+<p>Add support for 
+<ul>
+	<li>textareas</li>
+	<li>selects</li>
+	<li>reset</li>
+	<li>buttons</li>
+</ul>
+
+<pre class="prettyprint linenums languague-php">
+&lt;textarea name=&quot;message&quot; id=&quot;message&quot; cols=&quot;30&quot; rows=&quot;10&quot;&gt;&lt;/textarea&gt;
+
+&lt;button name=&quot;button&quot; id=&quot;button&quot;&gt;click me&lt;/button&gt;
+
+&lt;input type=&quot;reset&quot; value=&quot;reset form&quot;&gt;
+
+&lt;select name=&quot;my_select&quot; id=&quot;my_select&quot;&gt;
+	&lt;option value=&quot;option1&quot;&gt;Option One&lt;/option&gt;
+&lt;/select&gt;
+</pre>
+
+</p>
+
 </div>
 </div>
 <?php

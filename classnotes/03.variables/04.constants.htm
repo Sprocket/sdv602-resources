@@ -1,0 +1,23 @@
+<h1>Constants</h1>
+
+<p>Constants are just like variables but the value cannot be changed.</p>
+
+<p>You use them just like variables but they don't have a <code>$</code> before them. They are usually given all uppercase.</p>
+
+<p>Constants exist in the global scope and can be accessed in any of your scripts. You define contstants using the <code>define</code> function, passing it the constant name and value.</p>
+
+<pre class="prettyprint linenums languague-php">
+define(&#039;USER&#039;, &#039;John Doe&#039;);
+echo USER; // John Doe
+</pre>
+
+<p>You can test for a specific using <code>defined</code></p>
+
+
+<pre class="prettyprint linenums languague-php">
+if ( defined(&#039;USER&#039;))
+echo &#039;Hello&#039;. USER;
+</pre>
+
+
+<p><a href="http://php.net/manual/en/language.constants.php">PHP Docs: Constants</a></p>

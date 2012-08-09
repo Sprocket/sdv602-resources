@@ -1,0 +1,64 @@
+<h1>Sessions</h1>
+
+<p>HTTP is a 'stateless protocol'; this means data is not shared from page to page as visitors use your site. You can keep data and reuse it using sessions.</p>
+
+<p>You initiate a session using <code>session_start()</code>. This must be done on every page you wish to use sessions and has to be called before any content is sent to the browser, so it's a good idea to call it at the top of your code.</p>
+
+<pre class="prettyprint linenums languague-php">
+session_start();
+</pre>
+
+<p>A visitor accessing your web site is assigned a unique id that is usually stored in a cookie (sometimes in the URL). This id is then used to access a specific file on the webserver that stores the associated values.
+
+	The session support allows you to store data between requests in the $_SESSION superglobal array.</p>
+
+<p>You can then set and access session data just like other super globals.</p>
+
+<pre class="prettyprint linenums languague-php">
+$_SESSION['name'] = 'John';
+echo $_SESSION['name']; // John
+</pre>
+
+<p>Sessions are good for storing strings, numbers and arrays.</p>
+
+<p>The actual data itself is stored on the web server - not on the users computer, like cookies are. They also only exist for brief period of time, whereas cookies can be saved across sessions.</p>
+
+<p>Sessions are not a good idea for long term storage. Your web app should still function if the data is not present.</p>
+
+<h3>Naming</h3>
+<p>By default, sessions do not need a name.</p>
+
+<p>It can be a good idea to name your sessions. This is done before starting the session:</p>
+
+<pre class="prettyprint linenums languague-php">
+session_name('sdv602');
+session_start();
+</pre>
+
+<h3>Deleting Sessions</h3>
+
+<p>Session data is automatically deleted with the users web browser window is closed.</p>
+
+<p>You can clear session data using <code>session_destroy()</code> function. Note that the session data is still present for the current page even after it has been called. It is good idea to set the session to an empty array.</p>
+
+<pre class="prettyprint linenums languague-php">
+session_destroy();
+$_SESSION = array();
+header(&#039;Location: index.php&#039;); // redirects user to home page
+</pre>
+
+<p>Be aware that the cookie used to associate a user to a session is not cleared (and will likely be cleaned up later by the web browser).</p>
+
+<p>You can unset session variables using <code>unset()</code></p>
+<pre class="prettyprint linenums languague-php">
+unset($_SESSION[&#039;count&#039;]);
+</pre>
+
+
+<ul class="notes-links">
+	<li><a href="http://us.php.net/manual/en/book.session.php">Sessions</a></li>
+	<li><a href="http://us.php.net/manual/en/function.session-start.php">session_start()</a></li>
+	<li><a href="http://us.php.net/manual/en/function.session-destroy.php">session_destroy()</a></li>
+	<li><a href="http://us.php.net/manual/en/function.session-name.php">session_name()</a></li>
+	<li><a href="http://www.thesitewizard.com/php/sessions.shtml">thesitewizard.com: How to Use PHP Sessions to Store Data</a></li>
+</ul>
