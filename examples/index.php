@@ -23,6 +23,8 @@
 <h3>Form Helper</h3>
 <p>A collection of function to help make HTML forms quickly. <a href="form_helper.php">The plan</a></p>
 
+<h3>Sesssions</h3>
+<p><a href="sessions/index.php">A basic authentication system.</a></p>
 </div>
 </div><!-- row -->
 </div><!-- page-wrap -->
