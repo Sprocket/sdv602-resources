@@ -1,0 +1,15 @@
+<h1>Headers</h1>
+
+<p>PHP is closely connected with HTTP - Hyper-text Transfer Protocol. This is the set of protocols used when web browsers connect to web servers.</p>
+
+<h2>Headers</h2>
+<p>HTTP headers are little chunks of data sent between the server and client. They're used to help control things like authentication, caches, and defining what the web browser will accept.</p>
+
+<p>You can send headers with PHP using the <code>header()</code> function.</p>
+
+<h3>Location Header</h3>
+<p>A very user header to send is <em>location</em>. This will redirect the browser to the specified location. No code after this header will be executed.</p>
+
+<pre class="prettyprint linenums languague-php">
+header('Location: logout.php');
+</pre>
