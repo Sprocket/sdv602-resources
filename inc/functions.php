@@ -42,9 +42,13 @@ function main_nav(){
       <ul class="nav">
       <li><a class="brand" href="'.BASE_URL.'">'.PROJ_NAME.'</a></li>';
 
-      foreach ($sections as $title => $url) {
-      	$nav .= sprintf('<li><a href="'.BASE_URL.'%s">%s</a></li>', $url, $title);
-      }
+foreach ( $sections as $section) {
+	$nav .= sprintf('<li><a href="'.BASE_URL.'%s" title="%s">%s</a></li>',
+		$section['path'],
+		$section['desc'],
+		$section['title']
+		);
+}
 
     $nav .= '</div>
   </div>
@@ -176,4 +180,25 @@ function process_notes( $page ){
 function  edit_note_link($page) {
 	$edit_link = sprintf('<p><a href="%s/edit.php?page=%s" class="btn">edit</a></p>',BASE_URL,$page);
 	return $edit_link;
+}
+
+
+function section_details(){
+	global $sections;
+
+	$details = '<dl>';
+
+	foreach ( $sections as $section) {
+	$details .= sprintf('<dt><a href="'.BASE_URL.'%s" title="%s">%s</a></dt>
+		<dd>%s</dd>',
+		$section['path'],
+		$section['desc'],
+		$section['title'],
+		$section['desc']
+		);
+	}
+
+	return $details . '</dl>';
+
+
 }
