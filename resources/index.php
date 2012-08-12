@@ -13,6 +13,7 @@
 		<li><a href="#downloads">Downloads</a></li>
 		<li><a href="#libraries">Libraries</a></li>
 		<li><a href="#sublime">Sublime Text</a></li>
+		<li><a href="#sublimepackages">Sublime Text Packages</a></li>
 	</ul>
 </div>		
 
@@ -65,10 +66,24 @@
 	<dd>Where to get Sublime Text editor</dd>
 	<dt><a href="http://steverandytantra.com/thoughts/three-months-with-sublime-text-2">3 Months with Sublime Text</a></dt>
 	<dd>'Cool things' and some mods</dd>
-	<dt><a href="http://net.tutsplus.com/tutorials/tools-and-tips/essential-sublime-text-2-plugins-and-extensions/">Essential Plugins</a></dt>
-	<dd>'Some of the plugins and extensions that I’ve found quite useful'</dd>
 	<dt><a href="http://docs.sublimetext.info/en/latest/index.html">Unoffical Documentation</a></dt>
 	<dd>Pretty much anything you'd ever want to know about Sublime</dd>
+</dl>
+
+<h3 id="sublimepackages">Sublime Packages</h3>
+<dl>
+	<dt><a href="http://wbond.net/sublime_packages/package_control">Package Control</a></dt>
+	<dd>A very handy package manager for discovering, installing, updating and removing packages</dd>
+	<dt><a href="http://net.tutsplus.com/tutorials/tools-and-tips/essential-sublime-text-2-plugins-and-extensions/">Essential Plugins</a></dt>
+	<dd>'Some of the plugins and extensions that I’ve found quite useful'</dd>
+	<dt><a href="http://www.ericmartel.com/2012/01/12/sublime-text-2-stack-overflow-plugin/">Search Stackoverflow</a></dt>
+	<dd>A very useful plugin for research</dd>
+	<dt><a href="https://github.com/buymeasoda/soda-theme/">Soda Theme</a></dt>
+	<dd>Dark and light custom UI themes for Sublime Text 2.</dd>
+	<dt><a href="http://steverandytantra.com/gridfs/4fff140b1c1cc6a0cc0000b2-pastie-tmtheme.tmtheme">Pastie Colour Theme</a></dt>
+	<dd>Download this to your <code>Packages &gt; Themes</code> directory</dd>
+	<dt><a href="https://github.com/titoBouzout/SideBarEnhancements">SideBarEnhancements Plug in</a></dt>
+	<dd>Provides enhancements to the operations on Side Bar of Files and Folders</dd>
 </dl>
 
 </div>
