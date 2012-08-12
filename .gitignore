@@ -1,3 +1,9 @@
+# config file (use sample)
+inc/configs.php
+
+# user notes
 _notes
 
-inc/configs.php
+# sublime stuff
+*.sublime-project
+*.sublime-workspace
