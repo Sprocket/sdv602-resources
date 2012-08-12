@@ -39,6 +39,10 @@
 		<dd>A great introduction to PHP (first few videos are free)</dd>
 	<dt><a href="http://www.phptherightway.com/">PHP The Right Way</a></dt>
 		<dd>"an easy-to-read, quick reference for PHP best practices" (Available in a number of languages)</dd>
+	<dt><a href="http://sheriframadan.com/php-101/">PHP 101</a></dt>
+	<dd>A great introductory course on PHP</dd>
+	<dt><a href="http://phpmaster.com/category/php-tutorials/beginner/">PHP Master</a></dt>
+	<dd>A collection of PHP tutes from Benginger to Expert</dd>
 </dl>
 
 
@@ -46,6 +50,10 @@
 <dl>
 	<dt><a href="http://net.tutsplus.com/tutorials/php/quick-tip-loop-through-folders-with-phps-glob/">Glob</a></dt>
 	<dd>Loop through folders with glob</dd>
+	<dt><a href="http://www.developerdrive.com/2012/07/php-error-checking/">Error Checking</a></dt>
+	<dd>An small article on some advanced error checking techniques</dd>
+	<dt><a href="http://net.tutsplus.com/tutorials/php/quick-tip-7-super-handy-php-functions-for-beginners/">7 Super-Handy PHP Functions for Beginners</a></dt>
+	<dd>Some very useful hidden treasures</dd>
 </dl>
 
 <h3 id="downloads">Downloads</h3>
@@ -73,7 +81,9 @@
 <h3 id="sublimepackages">Sublime Packages</h3>
 <dl>
 	<dt><a href="http://wbond.net/sublime_packages/package_control">Package Control</a></dt>
-	<dd>A very handy package manager for discovering, installing, updating and removing packages</dd>
+	<dd>A very handy package manager for discovering, installing, updating and removing packages (see below)</dd>
+	<dt><a href="http://wbond.net/sublime_packages/community">Sublime Packages</a></dt>
+	<dd>An extensive list of Sublime Packages</dd>
 	<dt><a href="http://net.tutsplus.com/tutorials/tools-and-tips/essential-sublime-text-2-plugins-and-extensions/">Essential Plugins</a></dt>
 	<dd>'Some of the plugins and extensions that I’ve found quite useful'</dd>
 	<dt><a href="http://www.ericmartel.com/2012/01/12/sublime-text-2-stack-overflow-plugin/">Search Stackoverflow</a></dt>
@@ -85,6 +95,11 @@
 	<dt><a href="https://github.com/titoBouzout/SideBarEnhancements">SideBarEnhancements Plug in</a></dt>
 	<dd>Provides enhancements to the operations on Side Bar of Files and Folders</dd>
 </dl>
+
+<p>To install Package Control copy and paste this code into your Sublime Text console - accessed using ctrl ~</p>
+<pre class="prettyprint languague-php">
+import urllib2,os;pf='Package Control.sublime-package';ipp=sublime.installed_packages_path();os.makedirs(ipp) if not os.path.exists(ipp) else None;open(os.path.join(ipp,pf),'wb').write(urllib2.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read())
+</pre>
 
 </div>
 </div><!-- row -->
