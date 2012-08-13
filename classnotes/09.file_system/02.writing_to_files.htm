@@ -1,0 +1,31 @@
+<h1>Writing to Files</h1>
+
+<h3>Touch</h3>
+<p>This will create a file if it does not exist. If the file does, it will update its modification date.</p>
+<pre class="prettyprint linenums languague-php">
+touch(&#039;log.txt&#039;);
+</pre>
+
+<h3>file_get_contents</h3>
+<p>Reads entire file into a string and returns the string</p>
+<pre class="prettyprint linenums languague-php">
+$file = file_get_content(&#039;data.txt&#039;);
+echo $file;
+</pre>
+
+<h3>file_put_contents</h3>
+<p>Writes a string to a file. The file is created if it doesn't exist already. It accepts the filename and the content you wish to write to it. It will overwrite any existing content.</p>
+
+<pre class="prettyprint linenums languague-php">
+$entry = &quot;Dear Diary, today was fun.&quot;;
+$today = date(&#039;Y_m_j&#039;) . &#039;.txt&#039;; // 2012_08_14.txt
+if ( ! file_put_contents( $today, $entry ) ) {
+	echo &quot;I couldn&#039;t write today&#039;s entry sorry.&quot;;
+}
+</pre>
+
+<ul class="notes-links">
+	<li><a href="http://nz.php.net/manual/en/function.touch.php">touch</a></li>
+	<li><a href="http://nz.php.net/manual/en/function.file-get-contents.php">file_get_contents</a></li>
+	<li><a href="http://nz.php.net/manual/en/function.file-put-contents.php">file_put_contents</a></li>
+</ul>

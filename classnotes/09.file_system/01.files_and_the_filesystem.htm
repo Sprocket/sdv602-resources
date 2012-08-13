@@ -1,1 +1,58 @@
 <h1>Files and the Filesystem</h1>
+
+<h3>Including other files</h3>
+
+<p>You'll often want to include other files within your script. It might be a library of functions or part of an HTML page. There are two functions we can use - <code>include</code> and <code>require</code>. Both accepts a file path. Require will return a fatal error if it can't find the file and stop exection of your script.</p>
+
+<pre class="prettyprint linenums languague-php">
+include 'functions.php'; // includes a file within the same working directory
+require 'library/functions.php'; // requires the functions file in the library directory
+</pre>
+
+<p>Each also has a variant: <code>include_once</code> and <code>require_once</code>. These will not attach the file if it been included prior. (You can use parenthesis for all of these functions though they are not needed.)</p>
+
+
+<h3>file_exists, is_writable</h3>
+<p>This function accepts a path to a file and will return true if the file exists, false otherwise.</p>
+
+<p>A similar function is <code>is_writable</code> that will return true if you have sufficient priviledges to write to the specified file.</p>
+
+<pre class="prettyprint linenums languague-php">
+$file = &#039;files/data.txt&#039;;
+if ( file_exists( $file ) AND is_writable( $file ) ) { 
+	// write to file ...
+}
+</pre>
+
+
+<h3>getcwd - get current working directory</h3>
+<p>This will return a string of where PHP's 'pointer' is currently located. That is, the directory that the script is currently working from.</p>
+
+<pre class="prettyprint linenums languague-php">
+echo getcwd(); // /Library/WebServer/Documents/_nmit/lessons/09/glob
+</pre>
+
+<h3>Glob</h3>
+<p>Glob is a quick way of getting a list of files based on a search pattern. This pattern can be used to match filenames and/or extensions. Use an asterisk * as a wildcard to match anything. </p>
+
+<p>If no pattern is supplied then everything in the directory is returned.</p>
+
+
+<pre class="prettyprint linenums languague-php">
+$files = glob( &quot;*.htm&quot; ); // selects only html files
+foreach ( $files as $file ) {
+	echo &#039;&lt;a href=&quot;{$file}&quot;&gt;{$file}&lt;/a&gt;&#039;;
+}
+</pre>
+
+<p>The pattern can contain directory paths.</p>
+
+
+<ul class="notes-links">
+	<li><a href="http://nz.php.net/manual/en/function.include.php">include</a></li>
+	<li><a href="http://nz.php.net/manual/en/function.require.php">require</a></li>
+	<li><a href="http://nz.php.net/manual/en/function.getcwd.php">getcwd (current working directory)</a></li>
+	<li><a href="http://nz.php.net/manual/en/function.file-exists.php">file_exists</a></li>
+	<li><a href="http://nz.php.net/manual/en/function.is-writable.php">is_writable</a></li>
+	<li><a href="http://nz.php.net/glob">glob</a></li>
+</ul>
