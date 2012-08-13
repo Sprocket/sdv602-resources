@@ -65,7 +65,66 @@ echo $last_name; // Doe
 </pre>
 
 
+
+<h3>Count</h3>
+<p>You can count the number of items using the <code>count</code> function:</p>
+
+<pre class="prettyprint linenums languague-php">
+echo &#039;There are &#039;.count($letters).&#039; items in the $letters array&#039;;
+// 7
+</pre>
+
+<h3>Sum</h3>
+<p>This will add all the values and return the result</p>
+<pre class="prettyprint linenums languague-php">
+echo &#039;Sum of values: &lt;strong&gt;array_sum&lt;/strong&gt;&lt;br&gt;&#039;;
+echo array_sum($numbers);
+</pre>
+
+
+<h3>Range</h3>
+<p>This will fill an array with numbers within the defined numbers</p>
+<pre class="prettyprint linenums languague-php">
+$range = range(1, 10); // 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+print_r($range);
+Array
+(
+    [0] =&gt; 1
+    [1] =&gt; 2
+    [2] =&gt; 3
+    [3] =&gt; 4
+    [4] =&gt; 5
+    [5] =&gt; 6
+    [6] =&gt; 7
+    [7] =&gt; 8
+    [8] =&gt; 9
+    [9] =&gt; 10
+)
+</pre>
+<p>Notice how the indices (on the left) are one less than the value (on the right). This is because arrays are zero indexed.</p>
+
+<h3>Shuffle</h3>
+<p>This will shuffle an array into a random order.</p>
+<pre class="prettyprint linenums languague-php">
+echo &#039;1 to 10 mixed up: &lt;strong&gt;shuffle&lt;/strong&gt;&lt;br&gt;&#039;;
+shuffle($range);
+print_r($range);
+</pre>
+
+<h3>Getting a random value</h3>
+<p>There isn't a function in PHP that will give you a random value but we can use <code>array_rand</code> to get a random key from an array, and then use that result to select the value:</p>
+<pre class="prettyprint linenums languague-php">
+echo &#039;Random number from 1 to 20: &lt;strong&gt;array_rand&lt;/strong&gt; (gives a random key, not the value)&lt;br&gt;&#039;;
+$random_key = array_rand($range);
+echo $range[$random_key];
+</pre>
+
 <ul class="notes-links">
+	<li><a href="http://nz.php.net/count">count</a></li>
+	<li><a href="http://nz.php.net/sum">sum</a></li>
+	<li><a href="http://nz.php.net/array_rand">array_rand</a></li>
+	<li><a href="http://nz.php.net/shuffle">shuffle</a></li>
+	<li><a href="http://nz.php.net/range">range</a></li>
 	<li><a href="http://nz.php.net/manual/en/function.array-merge.php">array_merge()</a></li>
 	<li><a href="http://nz.php.net/manual/en/function.list.php">list()</a></li>
 </ul>
