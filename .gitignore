@@ -7,3 +7,5 @@ _notes
 # sublime stuff
 *.sublime-project
 *.sublime-workspace
+
+/sdv602-resources.sublime-project
