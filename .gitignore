@@ -9,3 +9,5 @@ _notes
 *.sublime-workspace
 
 /sdv602-resources.sublime-project
+
+*.phptidy-cache
