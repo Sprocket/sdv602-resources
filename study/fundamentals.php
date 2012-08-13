@@ -77,3 +77,6 @@
 
 </div><!-- row -->
 </div><!-- page wrap -->
+
+
+<?php echo page_footer(); ?>

@@ -6,7 +6,7 @@
 <div class="container page-wrap">
 <div class="row span10 offset1">
 
-<h1>Form Helper</h1>
+<h1>Sessions</h1>
 
 <h2>Goal</h2>
 <p>A simple log in system for an administration area.</p>
