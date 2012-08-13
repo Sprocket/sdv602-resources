@@ -1,0 +1,49 @@
+<h1>Searching Arrays</h1>
+
+<h3>in_array</h3>
+
+<p>This looks for a value within an array. It has two required parameters, the value you are looking for (the 'needle') and the array to look in (the 'haystack').</p>
+
+<p>This example looks for 'salad' in an array and executes some code if it <strong>doesn't</strong> find it (notice the exclaimation mark at the begining of the test).</p>
+
+<pre class="prettyprint linenums languague-php">
+$fav_food = array(&#039;pizza&#039;, &#039;hamburgers&#039;, &#039;fish and chips&#039;);
+
+if ( ! in_array(&#039;salad&#039;,$fav_food)) {
+	&#039;Perhaps you should make better food choices&#039;;
+}
+</pre>
+
+
+
+
+<h3>array_search</h3>
+
+<p>Will return the index (so a truthy value) if an item is within an array. Like <code>in_array</code> it also accepts a needle and a haystack. Note that this is a case-sensitive search.</p>
+
+<pre class="prettyprint linenums languague-php">
+echo array_search(&#039;fish and chips&#039;, $fav_food); //2
+</pre>
+
+
+<h3>array_key_exists</h3>
+<p>This is useful for searching if a key exists within an associative array</p>
+
+<pre class="prettyprint linenums languague-php">
+$person = array(&#039;name&#039;=&gt;&#039;John&#039;);
+
+$key = 'name';
+
+if ( array_key_exists( $key, $person) ) {
+	echo &quot;&#039;{$key}&#039; exists in the array&quot;;
+	//'name' exists in the array
+}
+</pre>
+
+
+
+<ul class="notes-links">
+	<li><a href="http://nz.php.net/in_array">in_array</a></li>
+	<li><a href="http://nz.php.net/array_search">array_search</a></li>
+	<li><a href="http://nz.php.net/manual/en/function.array-key-exists.php">array-key-exists</a></li>
+</ul>

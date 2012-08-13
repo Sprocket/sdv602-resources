@@ -1,0 +1,71 @@
+<h1>Associative arrays</h1>
+
+<p>You can define your own keys within arrays. These are called <em>associative arrays</em> as you are associating a key with a value. You can then use the key to access the values.</p>
+
+<p>You use the 'double' array like this:</p>
+
+<pre class="prettyprint linenums languague-php">
+$person = array(
+	&#039;firstname&#039;	=&gt; &#039;John&#039;,
+	&#039;lastname&#039;	=&gt; &#039;Doe&#039;,
+	&#039;gender&#039;	=&gt; &#039;male&#039;,
+	&#039;age&#039;		=&gt; 46,
+	&#039;job&#039;		=&gt; &#039;builder&#039;
+	);
+</pre>
+
+<p>You can then access the values using the key within square brackets:</p>
+
+<pre class="prettyprint linenums languague-php">
+echo $person['firstname']; // John
+echo $person['age']; // 46
+</pre>
+
+<h3>Changing values</h3>
+
+<p>You can update or add new values with the assignment operator (the equals sign), just as you do with other variables.</p>
+
+<pre class="prettyprint linenums languague-php">
+$person['job'] = 'car salesman' // updates existing value
+$person['fav_colour'] = 'blue'; // creates new item
+</pre>
+
+<h2>Multi-dimensional arrays</h2>
+<p>You can have arrays within arrays - so called <em>multi-dimensional arrays</em>.</p>
+
+<pre class="prettyprint linenums languague-php">
+$person = array(
+	'firstname'	=> 'Jane',
+	'job'		=> 'full-time mum',
+	'children'	=> array( 'Ben', 'Sally', 'Rebecca'),
+);
+
+echo $person['children'][0]; // Ben
+</pre>
+
+<p>You can have as many arrays within arrays as you want, though it can get unwieldly quickly.</p>
+
+
+<pre class="prettyprint linenums languague-php">
+$person = array(
+	'firstname'	=> 'Jane',
+	'job'		=> 'full-time mum',
+	'children'	=> array(
+		array( 'name' => 'Ben', 'age' => 7),
+		array( 'name' => 'Sally', 'age' => 9),
+		array( 'name' => 'Rebecca', 'age' => 11)
+	)
+);
+</pre>
+
+<p>We can now loop through each of the children and echo out their details:</p>
+
+
+<pre class="prettyprint linenums languague-php">
+foreach ( $person[&#039;children&#039;] as $child ){
+	echo &quot;{$child[&#039;name&#039;]} is {$child[&#039;age&#039;]}&quot;;
+}
+// Ben is 7
+// Sally is 9
+// Rebecca is 11
+</pre>

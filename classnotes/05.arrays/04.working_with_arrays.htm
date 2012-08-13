@@ -1,0 +1,36 @@
+<h1>Working with Arrays</h1>
+
+<h3>Foreach</h3>
+
+<p>Foreach is a way of looping through an array and performing an operation on each array item. It accepts an array and the name of new variable to use within the operation:</p>
+
+<pre class="prettyprint linenums languague-php">
+$fruits = array(&#039;apples&#039;,&#039;bananas&#039;,&#039;grapes&#039;);
+
+foreach ( $fruits as $fruit ) {
+	echo &quot;{$fruit} are tasty&lt;br /&gt;&quot;;
+}
+// apples are tasty
+// bananas are tasty
+// grapes are tasty
+</pre>
+
+
+<h3>array_push</h3>
+<pre class="prettyprint linenums languague-php">
+array_push($letters, &#039;q&#039;);
+print_r($letters);
+</pre>
+
+
+<h3>array_pop</h3>
+<pre class="prettyprint linenums languague-php">
+echo array_pop($letters);
+print_r($letters);
+</pre>
+
+<h3>array_shift</h3>
+<pre class="prettyprint linenums languague-php">
+echo array_shift($letters);
+print_r($letters);
+</pre>

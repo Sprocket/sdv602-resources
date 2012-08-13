@@ -1,0 +1,47 @@
+<h1>Sorting Arrays</h1>
+
+<p>There are several functions built in to PHP that allow you to rearrange arrays in a number of ways.</p>
+
+<h3>Sort</h3>
+<pre class="prettyprint linenums languague-php">
+$letters = array('z','y','a','n','b','x','c');
+$numbers = array(1, 7, 3, 85, -3, 1);
+sort($numbers);
+print_r($numbers);
+sort($letters);
+print_r($leters);
+</pre>
+
+<h3>ksort</h3>
+<p>This will sort an assoc. array by keys</p>
+<pre class="prettyprint linenums languague-php">
+$people = array(
+	&#039;Sam&#039;	=&gt; 17,
+	&#039;Ben&#039;	=&gt; 22,
+	&#039;Sue&#039;	=&gt; 28,
+	&#039;Trish&#039;	=&gt; 19
+);
+ksort($person);
+print_r($person);
+Array
+(
+    [Ben] =&gt; 22
+    [Sam] =&gt; 17
+    [Sue] =&gt; 28
+    [Trish] =&gt; 19
+)
+</pre>
+
+<h3>asort</h3>
+<p>This will sort an array by value</p>
+<pre class="prettyprint linenums languague-php">
+asort($person);
+print_r($person);
+Array
+(
+    [Sam] =&gt; 17
+    [Trish] =&gt; 19
+    [Ben] =&gt; 22
+    [Sue] =&gt; 28
+)
+</pre>
