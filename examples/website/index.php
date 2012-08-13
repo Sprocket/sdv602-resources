@@ -37,7 +37,7 @@
 		<dd>This will create the top of our HTML template. It will accept an optional <code>title</code> parameter but we won't use it for now.</dd>
 	<dt>page_footer()</dt>
 		<dd>This will close the page and include a footer.</dd>
-	<dt>get_page()</dt>
+	<dt>get_content()</dt>
 		<dd>This will retrieve the HTML page, if it exists.</dd>
 </dl>
 
@@ -68,6 +68,8 @@
 
 <h2>Assets</h2>
 <p>We will also need an assets directory for storying our stylesheets and images in appropriate directories.</p>
+
+<img src="website-includes.png" width="783" height="559" border="0" />
 
 
 </div>
