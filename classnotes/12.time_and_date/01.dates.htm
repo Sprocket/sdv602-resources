@@ -1,5 +1,57 @@
 <h1>Dates</h1>
 
+
+<h2>date</h2>
+<p>Returns a string formatted according to the given format string using the given integer timestamp or the current time if no timestamp is given.</p>
+
+<p>The date format uses characters that have a special meaning. By rearranging them you can specify the date format you require:</p>
+<pre class="prettyprint linenums languague-php">
+date(&quot;Y-m-d&quot;); // 2012-08-16
+date(&quot;d/m/Y&quot;); // 16/08/2012
+</pre>
+
+<p>You can also get time:</p>
+<pre class="prettyprint linenums languague-php">
+date(&quot;h:i:s A&quot;); // 08:25:52 PM
+date(&quot;G:i:s&quot;);  // 20:25:52
+</pre>
+
+<p>Months and days can be formatted in several ways:</p>
+<pre class="prettyprint linenums languague-php">
+date(&quot;F&quot;); // August
+date(&quot;M&quot;); // Aug
+date(&quot;l&quot;);  // Thursday
+date(&quot;D&quot;);  // Thu
+</pre>
+
+<p>You can also get Ante meridiem and Post meridiem and the ordinal suffix</p>
+<pre class="prettyprint linenums languague-php">
+date(&quot;F j, Y, g:i a&quot;); // August 16, 2012, 8:31 pm
+date(&quot;dS&quot;);  // 16th
+</pre>
+
+<p>There are also some common formats:</p>
+<pre class="prettyprint linenums languague-php">
+date(&quot;c&quot;); // 2012-08-16T20:28:24+12:00 (ISO 8601 date)
+date(&quot;r&quot;); // Thu, 16 Aug 2012 20:28:24 +1200 (RFC 2822 formatted date)
+</pre>
+
+
+
+<p>If you want to use characters within the template you have to escape them:</p>
+<pre class="prettyprint linenums languague-php">
+date(&#039;\i\t \i\s \t\h\e jS \d\a\y&#039;); // it is the 16th day
+</pre>
+
+</pre>
+<p>You can use date functions within tests and incorporate them into strings:</p>
+<pre class="prettyprint linenums languague-php">
+if ( date(&quot;L&quot;) ) echo &#039;It is a leap year&#039;; // It is a leap year
+echo &#039;It is week number &#039; . date(&quot;W&quot;); // It is week number 33
+</pre>
+
+
+
 <h2>strtotime</h2>
 <p>Parse about any English textual datetime description into a Unix timestamp</p>
 
@@ -12,6 +64,8 @@ strftime(&quot;%B %d, %Y&quot;, time()); // July 28, 2012
 
 <ul class="notes-links">
 	<li><a href="http://nz.php.net/manual/en/function.date.php">date</a></li>
+	<li><a href="http://nz.php.net/manual/en/function.time.php">time</a></li>
+	<li><a href="http://nz.php.net/manual/en/function.mktime.php">mktime</a></li>
 	<li><a href="http://nz.php.net/strftime">strftime</a></li>
 	<li><a href="http://nz.php.net/manual/en/function.strtotime.php">strtotime</a></li>
 </ul>
