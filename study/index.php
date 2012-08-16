@@ -18,6 +18,9 @@
 <h4><a href="fundamentals.php">PHP Fundamentals</a></h4>
 <p>A list of things you should know about PHP.</p>
 
+<h4><a href="fundamental_exercises.php">Fundamentals Exercises</a></h4>
+<p>A collection of exercises to help you learn the fundamentals of PHP.</p>
+
 
 </div>
 
