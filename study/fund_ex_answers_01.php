@@ -12,6 +12,7 @@ echo page_header('SDV602 Study');
 <li class="active"><a href="#variables" data-toggle="tab">variables</a></li>
 <li><a href="#arrays" data-toggle="tab">arrays</a></li>
 <li><a href="#numbered-arrays" data-toggle="tab">array of numbers</a></li>
+<li><a href="#assoc-arrays" data-toggle="tab">assoc arrays</a></li>
 </ul>
 
 <div class="tab-content">
@@ -128,6 +129,62 @@ foreach( $numbers as $number ){
 174 * 174 = 30276
 </pre>
 </div>
+
+<div class="tab-pane active" id="assoc-arrays">
+
+<h2>Associative Arrays</h2>
+<h4>Create an associative array of a fictious family,<br>use their names as keys and their ages as values</h4>
+<pre class="prettyprint linenums languague-php">
+$family = array(
+	&#039;Ben&#039;	=&gt; 10,
+	&#039;Sally&#039;	=&gt; 8,
+	&#039;John&#039;	=&gt; 40,
+	&#039;Sue&#039;	=&gt; 38
+);
+</pre>
+
+<h4>Print the array to the browser within &lt;pre&gt; tags</h4>
+<pre class="prettyprint linenums languague-php">
+echo &#039;&lt;pre&gt;&#039;;
+print_r( $family );
+echo &#039;&lt;/pre&gt;&#039;;
+
+[Ben] =&gt; 10
+[Sally] =&gt; 8
+[John] =&gt; 40
+[Sue] =&gt; 38
+</pre>
+
+<h4>Sort the array by the names (so, by the key), print it out</h4>
+<pre class="prettyprint linenums languague-php">
+ksort( $family );
+
+[Ben] =&gt; 10
+[John] =&gt; 40
+[Sally] =&gt; 8
+[Sue] =&gt; 38
+</pre>
+
+<p>If we'd have used <kbd>sort</kbd> we would have got:</p>
+<pre class="prettyprint linenums languague-php">
+[0] => 8
+[1] => 10
+[2] => 38
+[3] => 40
+</pre>
+
+<h4>Sort the array by age (sort by value), print it out</h4>
+<pre class="prettyprint linenums languague-php">
+asort( $family );
+print_r( $family );
+
+[Sally] =&gt; 8
+[Ben] =&gt; 10
+[Sue] =&gt; 38
+[John] =&gt; 40
+</pre>
+</div>
+
 
 </div><!-- tab content -->
 <?php echo page_footer(); ?>
