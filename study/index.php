@@ -20,7 +20,9 @@
 
 <h4><a href="fundamental_exercises.php">Fundamentals Exercises</a></h4>
 <p>A collection of exercises to help you learn the fundamentals of PHP.</p>
-
+<ul>
+	<li><a href="fund_ex_answers_01.php">answers 01 </a></li>
+</ul>
 
 </div>
 

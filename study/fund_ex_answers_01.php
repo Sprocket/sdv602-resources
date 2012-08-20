@@ -1,0 +1,133 @@
+<?php
+require '../inc/functions.php';
+echo page_header('SDV602 Study');
+?>
+<div class="container page-wrap">
+<div class="row span10 offset1">
+<h1>PHP Fundamental Exercises</h1>
+
+
+
+<ul class="nav nav-tabs">
+<li class="active"><a href="#variables" data-toggle="tab">variables</a></li>
+<li><a href="#arrays" data-toggle="tab">arrays</a></li>
+<li><a href="#numbered-arrays" data-toggle="tab">array of numbers</a></li>
+</ul>
+
+<div class="tab-content">
+
+<div class="tab-pane active" id="variables">
+<h2>Variables</h2>
+<h4>Create two variables called firstname and lastname with your names in them</h4>
+<pre class="prettyprint linenums languague-php">
+$firstname = &#039;Duncan&#039;;
+$lastname = &#039;Heal&#039;;
+</pre>
+
+<h4>Create a new string variable by joining the two variables together with a space between them</h4>
+<pre class="prettyprint linenums languague-php">
+$name = $firstname . &#039; &#039; . $lastname;
+</pre>
+
+<h4>Echo a message to the browser that uses the two variables in a string using double quotes</h4>
+<pre class="prettyprint linenums languague-php">
+echo &quot;Hello there, my name is {$firstname} {$lastname}&quot;;
+// Hello there, my name is Duncan Heal
+</pre>
+
+<h4>Do the same using single quotes and joining the variables to the string</h4>
+<pre class="prettyprint linenums languague-php">
+echo &#039;Hello there, my name is &#039;.$firstname.&#039; &#039;.$lastname;
+// Hello there, my name is Duncan Heal
+</pre>
+</div>
+
+
+<div class="tab-pane" id="arrays">
+
+<h2>Simple Arrays</h2>
+
+<h4>Create a simple array of your favourite foods, store it in a variable</h4>
+<pre class="prettyprint linenums languague-php">
+$fav_foods = array(&#039;steak&#039;,&#039;sagawala&#039;,&#039;salmon&#039;);
+
+[0] =&gt; steak
+[1] =&gt; sagawala
+[2] =&gt; salmon
+</pre>
+
+<h4>Add a new item to the array</h4>
+<pre class="prettyprint linenums languague-php">
+$fav_foods[] = &#039;peas&#039;;
+
+[0] =&gt; steak
+[1] =&gt; sagawala
+[2] =&gt; salmon
+[3] =&gt; peas
+</pre>
+
+<h4>Change the first item</h4>
+<pre class="prettyprint linenums languague-php">
+$fav_foods[0] = &#039;chops&#039;;
+
+[0] =&gt; chops
+[1] =&gt; sagawala
+[2] =&gt; salmon
+[3] =&gt; peas
+</pre>
+
+<h4>Echo the first and second items with a space between them</h4>
+<pre class="prettyprint linenums languague-php">
+echo $fav_food[0] . &#039; &#039; . $fav_food[1];
+
+// chops sagawala
+</pre>
+
+</div>
+
+
+<div class="tab-pane" id="numbered-arrays">
+
+<h2>Array of Numbers</h2>
+<h4>Create an array of random numbers</h4>
+<pre class="prettyprint linenums languague-php">
+$numbers = array(1, 3, 99, -42, 11, 174, -2);
+</pre>
+
+<h4>Print the sum of the array</h4>
+<pre class="prettyprint linenums languague-php">
+echo array_sum( $numbers );
+// 244
+</pre>
+
+<h4>Sort the array in numeric order</h4>
+<pre class="prettyprint linenums languague-php">
+sort( $numbers );
+
+[0] =&gt; -42
+[1] =&gt; -2
+[2] =&gt; 1
+[3] =&gt; 3
+[4] =&gt; 11
+[5] =&gt; 99
+[6] =&gt; 174
+</pre>
+
+<h4>For each item, multiply the number by itself and print it with an html &lt;br&gt; tag after it</h4>
+<pre class="prettyprint linenums languague-php">
+foreach( $numbers as $number ){
+	echo &quot;{$number} * {$number} = &quot; . $number * $number . &quot;&lt;br&gt;&quot;;
+}
+
+-42 * -42 = 1764
+-2 * -2 = 4
+1 * 1 = 1
+3 * 3 = 9
+11 * 11 = 121
+99 * 99 = 9801
+174 * 174 = 30276
+</pre>
+</div>
+
+</div><!-- tab content -->
+<?php echo page_footer(); ?>
