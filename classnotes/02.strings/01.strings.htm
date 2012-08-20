@@ -1,0 +1,96 @@
+<h1>Strings</h1>
+
+
+
+<h2>String Functions</h2>
+
+<h3>strtoupper</h3>
+<p>Make a string uppercase</p>
+
+<pre class="prettyprint linenums languague-php">
+$my_string = 'roses are red';
+echo strtoupper($my_string);
+// ROSES ARE RED
+</pre>
+
+<p>There are several other similar functions:</p>
+
+<dl>
+<dt>strtolower()</dt>
+	<dd>Make a string lowercase</dd>
+<dt>ucfirst()</dt>
+	<dd>Make a string's first character uppercase</dd>
+<dt>ucwords()</dt>
+	<dd>Uppercase the first character of each word in a string</dd>
+</dl>
+
+<pre class="prettyprint linenums languague-php">
+$my_string = &#039;rOsES Are reD&#039;;
+
+echo ucwords( $my_string );
+// ROsES Are ReD
+
+echo ucwords( strtolower( $my_string ) );
+// Roses Are Red
+</pre>
+
+<h2>Entities</h2>
+
+<h3>htmlentities</h3>
+<p>Convert all applicable characters to HTML entities</p>
+
+<pre class="prettyprint linenums languague-php">
+$html = &quot;&lt;h1&gt;I am some HTML&lt;/h1&gt;&quot;;
+echo htmlentities( $html );
+// &amp;lt;h1&amp;gt;I am some HTML&amp;lt;/h1&amp;gt;
+</pre>
+
+<h3>urlencode</h3>
+<p>This function is convenient when encoding a string to be used in a query part of a URL, as a convenient way to pass variables to the next page.</p>
+
+<pre class="prettyprint linenums languague-php">
+$link = &#039;my super gallery of holiday photos!&#039;;
+echo &#039;&lt;a href=&quot;/gallery.php?gallery_name=&#039;
+	. urlencode( $link )
+	. &#039;&quot;&gt;Next Gallery&lt;/a&gt;&#039;;
+// &lt;a href=&quot;/gallery.php?gallery_name=my+super+gallery+of+holiday+photos%21&quot;&gt;Next Gallery&lt;/a&gt;
+</pre>
+
+
+<h2>Trimming</h2>
+<p>'Trimming' refers to removing whitespace from strings. Whitespace are characters include things like spaces, line returns and tabs.</p>
+
+<pre class="prettyprint linenums languague-php">
+$user_input = &quot;   I   am 
+				a crazy
+					    string
+			&quot;;
+echo trim( $user_input );
+// I am a crazy string
+</pre>
+
+
+<dl>
+<dt>trim</dt>
+	<dd>Strip whitespace (or other characters) from the beginning and end of a string</dd>
+<dt>ltrim</dt>
+	<dd>Strip whitespace (or other characters) from the beginning of a string</dd>
+<dt>rtrim</dt>
+	<dd>Strip whitespace (or other characters) from the end of a string</dd>
+</dl>
+
+
+<ul class="notes-links">
+	<li><a href="http://nz.php.net/manual/en/function.strtoupper.php">strtoupper</a></li>
+	<li><a href="http://nz.php.net/manual/en/function.strtolower.php">strtolower</a></li>
+	<li><a href="http://nz.php.net/manual/en/function.ucfirst.php">ucfirst</a></li>
+	<li><a href="http://nz.php.net/manual/en/function.ucwords.php">ucwords</a></li>
+	<li><a href="http://nz.php.net/manual/en/function.htmlentities.php">htmlentities</a></li>
+	<li><a href="http://nz.php.net/manual/en/function.urlencode.php">urlencode</a></li>
+	<li><a href="http://nz.php.net/manual/en/function.trim.php">trim</a></li>
+	<li><a href="http://nz.php.net/manual/en/function.ltrim.php">ltrim</a></li>
+	<li><a href="http://nz.php.net/manual/en/function.rtrim.php">rtrim</a></li>
+
+</ul>
+
+
