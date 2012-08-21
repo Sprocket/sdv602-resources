@@ -13,6 +13,7 @@ echo page_header('SDV602 Study');
 <li><a href="#arrays" data-toggle="tab">arrays</a></li>
 <li><a href="#numbered-arrays" data-toggle="tab">array of numbers</a></li>
 <li><a href="#assoc-arrays" data-toggle="tab">assoc arrays</a></li>
+<li><a href="#flow" data-toggle="tab">app flow</a></li>
 </ul>
 
 <div class="tab-content">
@@ -184,6 +185,51 @@ print_r( $family );
 [John] =&gt; 40
 </pre>
 </div>
+
+
+<div class="tab-pane active" id="flow">
+
+<h2>APPLICATION FLOW</h2>
+
+<h4>Create a variable that contains a positive integer</h4>
+<pre class="prettyprint linenums languague-php">
+$int = 70;
+</pre>
+
+<h4>Create an if statement that tests if the integer is less than 100 and prints a message to the browser when it is</h4>
+<pre class="prettyprint linenums languague-php">
+if ( $int &lt; 100 ){
+	echo 'The integer is less than 100';
+}
+
+</pre>
+
+<h4>Add an elseif clause that prints another message if the number is greater than 100 but less than 200</h4>
+<pre class="prettyprint linenums languague-php">
+if ( $int &lt; 100 ){
+	echo 'The integer is less than 100';
+} else if ( $int &lt; 100 AND $int &gt; 200 ) {
+	echo 'The number is greater than 100 but less than 200';
+}
+</pre>
+
+<h4>And an else clause that prints a message if neither of these conditions are met</h4>
+<pre class="prettyprint linenums languague-php">
+if ( $int &lt; 100 ){
+	echo 'The integer is less than 100';
+} else if ( $int &lt; 100 AND $int &gt; 200 ) {
+	echo 'The number is greater than 100 but less than 200';
+} else {
+	echo 'The number is greater than 200';
+}
+</pre>
+
+
+
+
+</div>
+
+
 
 
 </div><!-- tab content -->
