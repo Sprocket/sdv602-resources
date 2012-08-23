@@ -1,0 +1,88 @@
+<h1>Searching Strings</h1>
+
+<h4>str_replace</h4>
+
+<p>Replace all occurrences of the search string with the replacement string</p>
+
+<pre class="prettyprint linenums languague-php">
+echo str_replace(&quot;dog&quot;, &quot;cat&quot;, &quot;I am a dog person&quot;);
+// I am a cat person
+</pre>
+
+<p>It is case-sensitve - use <kbd>str_ireplace()</kbd> for an insensetive search.</p>
+
+<p>This can be useful for filling up placeholders in a template</p>
+
+<pre class="prettyprint linenums languague-php">
+$template = &quot;&lt;body&gt;%content%&lt;/body&gt;&quot;
+$content = &quot;&lt;p&gt;Welcome to my web page&lt;/p&gt;&quot;
+
+$page = str_replace(&quot;%content%&quot;, $content , $template);
+echo $page;
+</pre>
+
+
+<pre class="prettyprint linenums languague-php">
+define(&#039;BASE_URL&#039;, &#039;/_docs/fuel/fuel/&#039;);
+
+$page = str_replace(&#039;{%docsurl%}&#039;, DOCSURL, file_get_contents($page) );
+
+// within page content
+&lt;ul class=&quot;notes-links&quot;&gt;
+	&lt;li&gt;&lt;a href=&quot;{%docsurl%}general/viewmodels.html&quot;&gt;ViewModels&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+
+<h4>preg_replace</h4>
+
+<p>Perform a regular expression search and replace</p>
+
+<pre class="prettyprint linenums languague-php">
+// [0-9.] will match any number and a full stop
+
+// removes extra characters
+function clean_linktext( $link ) {
+	$cleaned = preg_replace( &quot;/[0-9.]/&quot;, &quot;&quot;, basename( $link, &#039;.htm&#039; ) );
+	return str_replace( &#039;_&#039;, &#039; &#039;, $cleaned );
+}
+
+// $link = &#039;03.searching._strings.htm&#039;
+// returns &#039;searching strings&#039;
+</pre>
+
+<h4>substr_count</h4>
+
+<p>Count the number of substring occurrences</p>
+
+<p><kbd>int substr_count (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;string $haystack, string $needle [, int $offset = 0 [, int $length ]]
+<br>)</kbd></p>
+<pre class="prettyprint linenums languague-php">
+$text = &#039;This is a test&#039;;
+echo strlen($text); // 14
+
+echo substr_count($text, &#039;is&#039;); // 2
+
+// the string is reduced to &#039;s is a test&#039;, so it prints 1
+echo substr_count($text, &#039;is&#039;, 3);
+
+// the text is reduced to &#039;s i&#039;, so it prints 0
+echo substr_count($text, &#039;is&#039;, 3, 3);
+
+// generates a warning because 5+10 &gt; 14
+echo substr_count($text, &#039;is&#039;, 5, 10);
+
+
+// prints only 1, because it doesn&#039;t count overlapped substrings
+$text2 = &#039;gcdgcdgcd&#039;;
+echo substr_count($text2, &#039;gcdgcd&#039;);
+</pre>
+
+<ul class="notes-links">
+	<li href="http://nz.php.net/manual/en/function.str-replace.php">str_replace</li>
+	<li href="http://nz.php.net/manual/en/function.preg-replace.php">preg_replace</li>
+	<li href="http://nz.php.net/manual/en/function.substr-replace.php">substr_replace</li>
+	<li href="http://nz.php.net/manual/en/function.substr-count.php">substr_count</li>
+
+</ul>
