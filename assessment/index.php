@@ -25,7 +25,7 @@
 	<tr>
 		<th>1</th>
 		<td>
-			<h4>Presentation</h4>
+			<h4><a href="presentation.php">Presentation</a></h4>
 			<p>Brief presentation to the class based on notes</p>
 		</td>
 		<td>5</td>

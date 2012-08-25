@@ -126,6 +126,8 @@ a[href*="php.net"]
 	background: url(../img/sprites/php_net.png) no-repeat left;
 	}
 
+
+/*Nav*/
 .navbar .nav > li > a {
 	color: #eee;
 	font-weight: bold;
@@ -138,4 +140,26 @@ a[href*="php.net"]
 .navbar .nav > li > a:hover {
 	color: #fff;
 	background: #444;
+}
+.navbar-fixed-top .nav {
+
+background-image:-moz-linear-gradient(50% 0% -90deg,rgb(79,79,79) 0%,rgb(27,27,27) 50%,rgb(0,0,0) 50%,rgb(0,0,0) 98%); 
+background-image:-webkit-gradient(linear,50% 0%,50% 100%,color-stop(0, rgb(79,79,79)),color-stop(0.5, rgb(27,27,27)),color-stop(0.5, rgb(0,0,0)),color-stop(0.98, rgb(0,0,0)));
+background-image:-webkit-linear-gradient(-90deg,rgb(79,79,79) 0%,rgb(27,27,27) 50%,rgb(0,0,0) 50%,rgb(0,0,0) 98%);
+background-image:-o-linear-gradient(-90deg,rgb(79,79,79) 0%,rgb(27,27,27) 50%,rgb(0,0,0) 50%,rgb(0,0,0) 98%);
+background-image:-ms-linear-gradient(-90deg,rgb(79,79,79) 0%,rgb(27,27,27) 50%,rgb(0,0,0) 50%,rgb(0,0,0) 98%);
+background-image:linear-gradient(-90deg,rgb(79,79,79) 0%,rgb(27,27,27) 50%,rgb(0,0,0) 50%,rgb(0,0,0) 98%);
+-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff4f4f4f,endColorstr=#ff000000,GradientType=0)";
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff4f4f4f,endColorstr=#ff000000,GradientType=0);
+
+}
+.navbar .nav > li > a {
+	min-width: 110px;
+	color: #eee;
+	font-weight: bold;
+	border-right: 1px solid #444;
+	text-align: center;
+	font-size: 1.1em;
+	line-height: 25px;	
+	vertical-align: middle;
 }
