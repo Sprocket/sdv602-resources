@@ -1,0 +1,38 @@
+<h1>Sending Emails with PHP</h1>
+
+<p>PHP has a built in function to send emails. Please note, you will need to have email set up on your web server or use a third party.</p>
+
+<p><kbd>bool mail ( string $to , string $subject , string $message [, string $additional_headers [, string $additional_parameters ]] )</kbd></p>
+
+
+<pre class="prettyprint linenums languague-php">
+mail(&#039;user@website.co.nz&#039;, &#039;test email&#039;, &#039;this is a test email&#039;);
+</pre>
+
+<p>You can also provide more details using headers.</p>
+
+<pre class="prettyprint linenums languague-php">
+if ( send_test_email() ) echo &#039;mail sent!&#039;;
+
+function send_test_email(){
+
+	$to      = &#039;Bill Gates &lt;billg@microsoft.com&gt;&#039;;
+	$subject = &#039;test email message&#039;;
+	$message = &#039;testing!&#039;;
+	$headers = &#039;From: Me &lt;webmaster@website.com&gt;&#039; . &quot;\r\n&quot; .
+	    &#039;Reply-To: webmaster@website.com&#039; . &quot;\r\n&quot; .
+	    &#039;X-Mailer: PHP/&#039; . phpversion();
+
+	return mail($to, $subject, $message, $headers);
+}
+
+if ( send_test_email() ) echo &#039;mail sent!&#039;;
+else echo &#039;nope, soz&#039;;
+</pre>
+
+<p>You can pass HTML as the content as well as a plain-text version.</p>
+
+
+<ul class="notes-links">
+	<li><a href="http://nz.php.net/manual/en/function.mail.php">mail</a></li>
+</ul>

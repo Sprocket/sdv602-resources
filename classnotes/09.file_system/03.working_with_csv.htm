@@ -1,0 +1,49 @@
+<h1>Working with CSV Files</h1>
+
+<p><kbd>Comma separated value</kbd> files are plain text files that have a list of values separated by commas. Excel will typically render csv files as a spreadsheet. You can also save to them from many word processing and spreadsheet 
+applications as well as scripting languages.</p>
+
+<pre class="prettyprint linenums languague-php">
+// an example of csv
+one,two,three,four
+</pre>
+
+
+<h3>str_getcsv</h3>
+<p>Parse a CSV string into an array. We pass it a string of csv and it will return an array</p>
+<pre class="prettyprint linenums languague-php">
+$numbers_csv = &quot;one,two,three,four&quot;;
+$numbers = str_getcsv( $numbers_csv );
+
+print_r($numbers);
+[0] =&gt; one
+[1] =&gt; two
+[2] =&gt; three
+[3] =&gt; four
+</pre>
+
+<p>You can extract the contents of a csv file using <code>file_get_contents</code></p>
+
+
+<pre class="prettyprint linenums languague-php">
+// notice that the csv file doesn't require the the .csv extension
+$words = str_getcsv( file_get_contents('inc/words.txt') );
+</pre>
+
+<!-- 
+<pre class="prettyprint linenums languague-php">
+// more complex
+sally, 38, lawyer, broccoli,
+john, 30, doctor, pizza,
+sam, 14, student, hamburgers,
+sue, 12, student, fish and chips
+</pre>
+ -->
+
+
+
+<ul class="notes-links">
+	<li><a href="http://nz.php.net/manual/en/function.str-getcsv.php">str-getcsv</a></li>
+	<li><a href="http://php.net/manual/en/function.fgetcsv.php">fgetcsv</a></li>
+
+</ul>

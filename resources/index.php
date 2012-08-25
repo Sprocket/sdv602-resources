@@ -54,6 +54,8 @@
 	<dd>An small article on some advanced error checking techniques</dd>
 	<dt><a href="http://net.tutsplus.com/tutorials/php/quick-tip-7-super-handy-php-functions-for-beginners/">7 Super-Handy PHP Functions for Beginners</a></dt>
 	<dd>Some very useful hidden treasures</dd>
+	<dt><a href="http://www.homeandlearn.co.uk/php/php10p6.html">homeandlearn CSV</a></dt>
+	<dd>Tutorial on Comma Separated Values</dd>
 </dl>
 
 <h3 id="downloads">Downloads</h3>
