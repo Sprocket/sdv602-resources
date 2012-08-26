@@ -1,0 +1,302 @@
+<h1>Operators</h1>
+
+<h2>Arithmetic Operators</h2>
+<p>Remember basic arithmetic from school? These work just like those.</p>
+
+<table class="table table-striped">
+<caption><strong>Arithmetic Operators</strong></caption>
+
+<thead>
+<tr>
+<th>Example</th>
+<th>Name</th>
+<th>Result</th>
+<th>Example $a = 2, $b =1</th>
+</tr>
+
+</thead>
+
+<tbody>
+<tr>
+<td>-$a</td>
+<td>Negation</td>
+<td>Opposite of <var>$a</var>.</td>
+<td>-2</td>
+</tr>
+
+<tr>
+<td>$a + $b</td>
+<td>Addition</td>
+<td>Sum of <var>$a</var> and <var>$b</var>.</td>
+<td>3</td>
+</tr>
+
+<tr>
+<td>$a - $b</td>
+<td>Subtraction</td>
+<td>Difference of <var>$a</var> and <var>$b</var>.</td>
+<td>1</td>
+</tr>
+
+<tr>
+<td>$a * $b</td>
+<td>Multiplication</td>
+<td>Product of <var>$a</var> and <var>$b</var>.</td>
+<td>2</td>
+</tr>
+
+<tr>
+<td>$a / $b</td>
+<td>Division</td>
+<td>Quotient of <var>$a</var> and <var>$b</var>.</td>
+<td>2</td>
+</tr>
+
+<tr>
+<td>$a % $b</td>
+<td>Modulus</td>
+<td>Remainder of <var>$a</var> divided by <var>$b</var>.</td>
+<td>2</td>
+</tr>
+
+</tbody>
+
+</table>
+
+<h2>Comparison Operators</h2>
+
+<p>Comparison operators allow you to compare two values. You may also be interested in viewing the type comparison tables, as they show examples of various type related comparisons.</p>
+
+
+
+<table class="table table-striped">
+<caption><strong>Comparison Operators</strong></caption>
+
+<thead>
+<tr>
+<th>Example</th>
+<th>Name</th>
+<th>Result</th>
+</tr>
+
+</thead>
+
+<tbody>
+<tr>
+<td>$a == $b</td>
+<td>Equal</td>
+<td>TRUE if <var>$a</var> is equal to <var>$b</var> after type juggling.</td>
+</tr>
+
+<tr>
+<td>$a === $b</td>
+<td>Identical</td>
+<td>
+TRUE if <var>$a</var> is equal to <var>$b</var>, and they are of the same
+type.
+</td>
+</tr>
+
+<tr>
+<td>$a != $b</td>
+<td>Not equal</td>
+<td>TRUE if <var>$a</var> is not equal to <var>$b</var> after type juggling.</td>
+</tr>
+
+<tr>
+<td>$a &lt;&gt; $b</td>
+<td>Not equal</td>
+<td>TRUE if <var>$a</var> is not equal to <var>$b</var> after type juggling.</td>
+</tr>
+
+<tr>
+<td>$a !== $b</td>
+<td>Not identical</td>
+<td>
+TRUE if <var>$a</var> is not equal to <var>$b</var>, or they are not of the same
+type.
+</td>
+</tr>
+
+<tr>
+<td>$a &lt; $b</td>
+<td>Less than</td>
+<td>TRUE if <var>$a</var> is strictly less than <var>$b</var>.</td>
+</tr>
+
+<tr>
+<td>$a &gt; $b</td>
+<td>Greater than</td>
+<td>TRUE if <var>$a</var> is strictly greater than <var>$b</var>.</td>
+</tr>
+
+<tr>
+<td>$a &lt;= $b</td>
+<td>Less than or equal to </td>
+<td>TRUE if <var>$a</var> is less than or equal to <var>$b</var>.</td>
+</tr>
+
+<tr>
+<td>$a &gt;= $b</td>
+<td>Greater than or equal to </td>
+<td>TRUE if <var>$a</var> is greater than or equal to <var>$b</var>.</td>
+</tr>
+
+</tbody>
+
+</table>
+
+
+
+<h2>Logical Operators</h2>
+
+<table class="table table-striped">
+<caption><strong>Logical Operators</strong></caption>
+
+<thead>
+<tr>
+<th>Example</th>
+<th>Name</th>
+<th>Result</th>
+</tr>
+
+</thead>
+
+<tbody>
+<tr>
+<td>$a and $b</td>
+<td>And</td>
+<td>TRUE if both <var>$a</var> and <var>$b</var> are TRUE.</td>
+</tr>
+
+<tr>
+<td>$a or $b</td>
+<td>Or</td>
+<td>TRUE if either <var>$a</var> or <var>$b</var> is TRUE.</td>
+</tr>
+
+<tr>
+<td>$a xor $b</td>
+<td>Xor</td>
+<td>TRUE if either <var>$a</var> or <var>$b</var> is TRUE, but not both.</td>
+</tr>
+
+<tr>
+<td>! $a</td>
+<td>Not</td>
+<td>TRUE if <var>$a</var> is not TRUE.</td>
+</tr>
+
+<tr>
+<td>$a &amp;&amp; $b</td>
+<td>And</td>
+<td>TRUE if both <var>$a</var> and <var>$b</var> are TRUE.</td>
+</tr>
+
+<tr>
+<td>$a || $b</td>
+<td>Or</td>
+<td>TRUE if either <var>$a</var> or <var>$b</var> is TRUE.</td>
+</tr>
+
+</tbody>
+
+</table>
+
+
+<h2>String Operators</h2>
+
+<p>There are two string operators. The first is the concatenation operator ('.'), which returns the concatenation of its right and left arguments. The second is the concatenating assignment operator ('.='), which appends the argument on the right side to the argument on the left side. Please read Assignment Operators for more information.</p>
+
+<pre class="prettyprint linenums languague-php">
+$a = &quot;Hello &quot;;
+$b = $a . &quot;World!&quot;; // now $b contains &quot;Hello World!&quot;
+
+$a = &quot;Hello &quot;;
+$a .= &quot;World!&quot;; // now $a contains &quot;Hello World!&quot;
+</pre>
+
+
+<h2>Incrementing/Decrementing Operators</h2>
+<p>PHP supports pre- and post-increment and decrement operators.These let you add or subtract 1 from a variable in a convenient way.</p>
+
+<p>
+	If the operator comes <strong>before</strong> the variable it is operated on before returning the variable.
+	When the operator comes <strong>after</strong> the variable returned and then operated on.
+</p>
+
+<table class="table ">
+<caption><strong>Increment/decrement Operators</strong></caption>
+
+<thead>
+<tr>
+<th>Example</th>
+<th>Name</th>
+<th>Effect</th>
+</tr>
+
+</thead>
+
+<tbody>
+<tr>
+<td>++$a</td>
+<td>Pre-increment</td>
+<td>Increments <var>$a</var> by one, then returns <var>$a</var>.</td>
+</tr>
+
+<tr>
+<td>$a++</td>
+<td>Post-increment</td>
+<td>Returns <var>$a</var>, then increments <var>$a</var> by one.</td>
+</tr>
+
+<tr>
+<td>--$a</td>
+<td>Pre-decrement</td>
+<td>Decrements <var>$a</var> by one, then returns <var>$a</var>.</td>
+</tr>
+
+<tr>
+<td>$a--</td>
+<td>Post-decrement</td>
+<td>Returns <var>$a</var>, then decrements <var>$a</var> by one.</td>
+</tr>
+
+</tbody>
+</table>
+
+<pre class="prettyprint linenums languague-php">
+$attempt = 2;
+if ( ++$attempt >= 3 ) echo 'you have had too many attempts';
+// you have had too many attempts
+</pre>
+
+<pre class="prettyprint linenums languague-php">
+$num = 1;
+echo ++$num; // 2
+echo $num; // 2
+
+$num = 1;
+echo $num++; // 1
+echo $num; // 2
+</pre>
+
+<p>Decrementing works in the exactly the same way but 1 is subtracted from the variable.</p>
+<pre class="prettyprint linenums languague-php">
+$num = 2;
+echo --$num; // 1
+echo $num; // 1
+</pre>
+
+<p>
+	<span class="label label-info">Note</span> you cannot decrement from <kbd>NULL</kbd> (it will return NULL) but incrementing will give you a positive number.
+</p>
+
+
+<ul class="notes-links">
+	<li><a href="http://php.net/manual/en/language.operators.arithmetic.php">arithmetic operators</a></li>
+	<li><a href="http://php.net/manual/en/language.operators.comparison.php">comparison operators</a></li>
+	<li><a href="http://www.php.net/manual/en/language.operators.logical.php">logical operators</a></li>
+	<li><a href="http://www.php.net/manual/en/language.operators.string.php">string operators</a></li>
+	<li><a href="http://www.php.net/manual/en/language.operators.increment.php">increment operators</a></li>
+</ul>
