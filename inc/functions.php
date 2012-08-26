@@ -36,10 +36,11 @@ function page_footer() {
 function main_nav() {
 	global $sections;
 
-	$nav = '<div class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
+	$nav = '
+	<div class="navbar navbar-fixed-top navbar-inverse">
+	<div class="navbar-inner">
     <div class="container">
-      <ul class="nav">
+		<ul class="nav">
       <li><a class="brand" href="'.BASE_URL.'">'.PROJ_NAME.'</a></li>';
 
 	foreach ( $sections as $section ) {
