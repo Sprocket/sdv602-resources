@@ -1,0 +1,141 @@
+<h1>String Functions</h1>
+
+<h2>Changing Case</h2>
+
+<h3>strtoupper</h3>
+<p>Make a string uppercase</p>
+
+<pre class="prettyprint linenums languague-php">
+$my_string = 'roses are red';
+echo strtoupper($my_string);
+// ROSES ARE RED
+</pre>
+
+<p>There are several other similar functions:</p>
+
+<dl>
+<dt>strtolower()</dt>
+	<dd>Make a string lowercase</dd>
+<dt>ucfirst()</dt>
+	<dd>Make a string's first character uppercase</dd>
+<dt>ucwords()</dt>
+	<dd>Uppercase the first character of each word in a string</dd>
+</dl>
+
+<pre class="prettyprint linenums languague-php">
+$my_string = &#039;rOsES Are reD&#039;;
+
+echo ucwords( $my_string );
+// ROsES Are ReD
+
+echo ucwords( strtolower( $my_string ) );
+// Roses Are Red
+</pre>
+
+
+
+<h2>Dealing with entities</h2>
+
+<h3>htmlentities</h3>
+<p>Convert all applicable characters to HTML entities</p>
+
+<pre class="prettyprint linenums languague-php">
+$html = &quot;&lt;h1&gt;I am some HTML&lt;/h1&gt;&quot;;
+echo htmlentities( $html );
+// &amp;lt;h1&amp;gt;I am some HTML&amp;lt;/h1&amp;gt;
+</pre>
+
+<h3>urlencode</h3>
+<p>This function is convenient when encoding a string to be used in a query part of a URL, as a convenient way to pass variables to the next page.</p>
+
+<pre class="prettyprint linenums languague-php">
+$link = &#039;my super gallery of holiday photos!&#039;;
+echo &#039;&lt;a href=&quot;/gallery.php?gallery_name=&#039;
+	. urlencode( $link )
+	. &#039;&quot;&gt;Next Gallery&lt;/a&gt;&#039;;
+// &lt;a href=&quot;/gallery.php?gallery_name=my+super+gallery+of+holiday+photos%21&quot;&gt;Next Gallery&lt;/a&gt;
+</pre>
+
+
+<h2>Trimming</h2>
+
+<p>'Trimming' refers to removing whitespace from strings. Whitespace are characters include things like spaces, line returns and tabs.</p>
+
+<pre class="prettyprint linenums languague-php">
+$user_input = &quot;   I   am 
+				a crazy
+					    string
+			&quot;;
+echo trim( $user_input );
+// I am a crazy string
+</pre>
+
+
+<dl>
+<dt>trim</dt>
+	<dd>Strip whitespace (or other characters) from the beginning and end of a string</dd>
+<dt>ltrim</dt>
+	<dd>Strip whitespace (or other characters) from the beginning of a string</dd>
+<dt>rtrim</dt>
+	<dd>Strip whitespace (or other characters) from the end of a string</dd>
+</dl>
+
+
+
+<h2>printf</h2>
+<p>One way to format strings is to use the <code>printf</code> function.</p>
+
+
+<pre class="prettyprint linenums languague-php">
+$template = &quot;My favourite pet is a %s, her name is %s&quot;;
+printf( $template, &#039;cat&#039;, &#039;Samantha&#039;);
+</pre>
+
+<p>This will print "My favourite pet is a cat, her name is Samantha".</p>
+
+<p>The template can contain any number of placeholders. They are matched in order with passed values. There must be the same number of values as placeholders.</p>
+
+<p>The placeholders can be of different types and are denoted by a percent sign.</p>
+
+<table class="table table-striped">
+<thead><tr><th>Specifier</th><th>Meaning</th></tr></thead>
+<tbody>
+<tr><th>%s</th><td>String</td></tr>
+<tr><th>%d</th><td>Decimal</td></tr>
+<tr><th>%f</th><td>Float</td></tr>
+</tbody>
+</table>
+
+<p>You can use HTML tags within the template</p>
+
+<p>One of the more powerful features is formatting output. Using the template of "%.2f" will give us this:</p>
+
+<pre class="prettyprint linenums languague-php">
+printf(&#039;%.2f&#039;, 1); // 1.00
+</pre>
+
+<table class="table table-striped">
+<thead><tr><th>Input</th><th>Output</th></tr></thead>
+<tbody>
+<tr><th>1</th><td>1.00</td></tr>
+<tr><th>.9</th><td>0.90</td></tr>
+<tr><th>1234</th><td>1234.00</td></tr>
+</tbody>
+</table>
+
+<p>The result will be printed immediately to the browser. If you want to store the result in a variable use the related function <code>sprintf</code></p>
+
+<ul class="notes-links">
+	<li><a href="http://nz.php.net/manual/en/function.strtoupper.php">strtoupper</a></li>
+	<li><a href="http://nz.php.net/manual/en/function.strtolower.php">strtolower</a></li>
+	<li><a href="http://nz.php.net/manual/en/function.ucfirst.php">ucfirst</a></li>
+	<li><a href="http://nz.php.net/manual/en/function.ucwords.php">ucwords</a></li>
+	<li><a href="http://nz.php.net/manual/en/function.htmlentities.php">htmlentities</a></li>
+	<li><a href="http://nz.php.net/manual/en/function.urlencode.php">urlencode</a></li>
+	<li><a href="http://nz.php.net/manual/en/function.trim.php">trim</a></li>
+	<li><a href="http://nz.php.net/manual/en/function.ltrim.php">ltrim</a></li>
+	<li><a href="http://nz.php.net/manual/en/function.rtrim.php">rtrim</a></li>
+	<li><a href="http://nz.php.net/manual/en/function.sprintf.php">sprintf()</a></li>
+</ul>
+
+

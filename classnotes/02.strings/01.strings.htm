@@ -1,96 +1,142 @@
 <h1>Strings</h1>
 
+<p>A <kbd>string</kbd> in PHP is a series, or string, of one or more characters.</p>
+
+<p>A string can contain zero characters, an empty string, and has a falsy value.</p>
 
 
-<h2>String Functions</h2>
+<h2>Creating strings</h2>
 
-<h3>strtoupper</h3>
-<p>Make a string uppercase</p>
-
-<pre class="prettyprint linenums languague-php">
-$my_string = 'roses are red';
-echo strtoupper($my_string);
-// ROSES ARE RED
-</pre>
-
-<p>There are several other similar functions:</p>
-
-<dl>
-<dt>strtolower()</dt>
-	<dd>Make a string lowercase</dd>
-<dt>ucfirst()</dt>
-	<dd>Make a string's first character uppercase</dd>
-<dt>ucwords()</dt>
-	<dd>Uppercase the first character of each word in a string</dd>
-</dl>
+<p>Strings are are usually specfied using single or double quotes.</p>
 
 <pre class="prettyprint linenums languague-php">
-$my_string = &#039;rOsES Are reD&#039;;
-
-echo ucwords( $my_string );
-// ROsES Are ReD
-
-echo ucwords( strtolower( $my_string ) );
-// Roses Are Red
+echo &#039;Hello World&#039;;
+$greeting = &quot;Hello World&quot;;
 </pre>
 
-<h2>Entities</h2>
+<h3>Single Quotes</h3>
 
-<h3>htmlentities</h3>
-<p>Convert all applicable characters to HTML entities</p>
+<p>Unlike the double-quoted and heredoc syntaxes, variables and escape sequences for special characters will not be expanded when they occur in single quoted strings.</p>
+
+<h3>Double Quotes</h3>
+
+<p>Using double quotes has the advantage that variables and escape sequences will be expanded.</p>
 
 <pre class="prettyprint linenums languague-php">
-$html = &quot;&lt;h1&gt;I am some HTML&lt;/h1&gt;&quot;;
-echo htmlentities( $html );
-// &amp;lt;h1&amp;gt;I am some HTML&amp;lt;/h1&amp;gt;
+$name = &#039;John&#039;;
+echo &quot;Hello {$name}&quot;; // Hello John
 </pre>
 
-<h3>urlencode</h3>
-<p>This function is convenient when encoding a string to be used in a query part of a URL, as a convenient way to pass variables to the next page.</p>
+<p>Note that the curly braces are optional but reccomended.</p>
+
+
+<h2>Joining strings</h2>
+
+<p>To join two or more strings we use the concatenation operator, the full stop. This will return the result of adding the right sided string onto the left sided string.
 
 <pre class="prettyprint linenums languague-php">
-$link = &#039;my super gallery of holiday photos!&#039;;
-echo &#039;&lt;a href=&quot;/gallery.php?gallery_name=&#039;
-	. urlencode( $link )
-	. &#039;&quot;&gt;Next Gallery&lt;/a&gt;&#039;;
-// &lt;a href=&quot;/gallery.php?gallery_name=my+super+gallery+of+holiday+photos%21&quot;&gt;Next Gallery&lt;/a&gt;
+$string1 = &#039;Hello &#039;; // notice the space
+$string2 = &#039;World&#039;;
+$string3 = $string1 . $string2; // Hello World
 </pre>
 
-
-<h2>Trimming</h2>
-<p>'Trimming' refers to removing whitespace from strings. Whitespace are characters include things like spaces, line returns and tabs.</p>
+<p>The second is the concatenating assignment operator ('.='), which appends the argument on the right side to the argument on the left side. Please read Assignment Operators for more information.</p>
 
 <pre class="prettyprint linenums languague-php">
-$user_input = &quot;   I   am 
-				a crazy
-					    string
-			&quot;;
-echo trim( $user_input );
-// I am a crazy string
+$string1 = &#039;Hello &#039;;
+$string1 .= &#039;World&#039;; // Hello World
 </pre>
 
+<p>See the section on operators for more on the string operators.</p>
 
-<dl>
-<dt>trim</dt>
-	<dd>Strip whitespace (or other characters) from the beginning and end of a string</dd>
-<dt>ltrim</dt>
-	<dd>Strip whitespace (or other characters) from the beginning of a string</dd>
-<dt>rtrim</dt>
-	<dd>Strip whitespace (or other characters) from the end of a string</dd>
-</dl>
+
+
+
+<h2>Escaping Strings</h2>
+
+<p>We specify the content of strings using strings, sometimes this will cause problems as the characters can have special meaning in PHP or HTML contexts. We get around this by 'escaping' characters - this ensure that we can specify the character without breaking our code. This is done by putting a backslash before the character.</p>
+<p>In the example below we can't use a single quote mark in the phrase as it is the same as the delimiter used to specify the string.</p>
+
+<pre class="prettyprint linenums languague-php">
+$phrase = &#039;I&#039;ll be back&#039;; // invalid syntax
+</pre>
+
+<p>To use a single quote within single quotes we have to escape the quote character. (Most code editors will highlight problems with incorrect nesting or irregularities with quotes.)</p>
+
+<pre class="prettyprint linenums languague-php">
+$phrase = &#039;I\&#039;ll be back&#039;; // valid 
+echo $phrase; // I&#039;ll be back
+</pre>
+
+<p>Another way around single quotes is to use double quotes to delimit the string. This will also work the other way around. You can also escape characters and use different quotes.</p>
+
+<pre class="prettyprint linenums languague-php">
+$phrase = &quot;I&#039;ll be back&quot;; // valid
+$phrase2 = &#039;He said &quot;I will be back&quot;&#039;; // valid
+$phrase3 = &#039;He said &quot;I\&#039;ll be back&quot;&#039;; // valid
+</pre>
+
+<p>Whitespace, such as linefeeds and tabs, can also be escaped. This only works when using double quotes.</p>
+
+<table class="table table-striped">
+<caption><strong>Escaped characters</strong></caption>
+
+<thead><tr><th>Sequence</th><th>Meaning</th></tr></thead>
+<tbody>
+<tr>
+<td><em>\n</em></td>
+<td>linefeed</td>
+</tr>
+
+<tr>
+<td><em>\r</em></td>
+<td>carriage return</td>
+</tr>
+
+<tr>
+<td><em>\t</em></td>
+<td>horizontal tab</td>
+</tr>
+
+<tr>
+<td><em>\v</em></td>
+<td>vertical tab</td>
+</tr>
+
+<tr>
+<td><em>\e</em></td>
+<td>escape</td>
+</tr>
+
+<tr>
+<td><em>\f</em></td>
+<td>form feed</td>
+</tr>
+
+<tr>
+<td><em>\\</em></td>
+<td>backslash</td>
+</tr>
+
+<tr>
+<td><em>\$</em></td>
+<td>dollar sign</td>
+</tr>
+
+<tr>
+<td><em>\&quot;</em></td>
+<td>double-quote</td>
+</tr>
+
+</tbody>
+</table>
+
+
+<p>There is a built-in php function for adding slashes to strings: <kbd>addslashes</kbd>. It is most commonly used on text before inserting it into a database. You can remove slashes using <kbd>stripslashes</kbd>.</p>
 
 
 <ul class="notes-links">
-	<li><a href="http://nz.php.net/manual/en/function.strtoupper.php">strtoupper</a></li>
-	<li><a href="http://nz.php.net/manual/en/function.strtolower.php">strtolower</a></li>
-	<li><a href="http://nz.php.net/manual/en/function.ucfirst.php">ucfirst</a></li>
-	<li><a href="http://nz.php.net/manual/en/function.ucwords.php">ucwords</a></li>
-	<li><a href="http://nz.php.net/manual/en/function.htmlentities.php">htmlentities</a></li>
-	<li><a href="http://nz.php.net/manual/en/function.urlencode.php">urlencode</a></li>
-	<li><a href="http://nz.php.net/manual/en/function.trim.php">trim</a></li>
-	<li><a href="http://nz.php.net/manual/en/function.ltrim.php">ltrim</a></li>
-	<li><a href="http://nz.php.net/manual/en/function.rtrim.php">rtrim</a></li>
-
+	<li><a href="http://nz.php.net/manual/en/language.types.string.php">String Type</a></li>
+	<li><a href="http://nz.php.net/manual/en/function.addslashes.php">addslashes</a></li>
+	<li><a href="http://nz.php.net/manual/en/function.stripslashes.php">stripslashes</a></li>
 </ul>
-
-
