@@ -51,6 +51,10 @@ $sections = array(
 			"path"	=> "/study/",
 			"desc"	=> "Requirements and quizzes"
 			),
+	array( "title"	=> "Assessment",
+			"path"	=> "/assessment/",
+			"desc"	=> "List of assessments and resources"
+			),
 	);
 
 /* * * * * * * * * * * * * * * * * * * *
