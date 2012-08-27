@@ -29,6 +29,12 @@
 <h3>Website system</h3>
 <p><a href="website/index.php">A simple website system.</a></p>
 
+<h3>Process</h3>
+<p><a href="process/index.php">Information about web app design process</a></p>
+
+<h3>Shuffle Word</h3>
+<p><a href="shuffle_word/index.php">An exciting game of word guessery.</a></p>
+
 
 </div>
 </div><!-- row -->
