@@ -33,30 +33,6 @@ echo ucwords( strtolower( $my_string ) );
 </pre>
 
 
-
-<h2>Dealing with entities</h2>
-
-<h3>htmlentities</h3>
-<p>Convert all applicable characters to HTML entities</p>
-
-<pre class="prettyprint linenums languague-php">
-$html = &quot;&lt;h1&gt;I am some HTML&lt;/h1&gt;&quot;;
-echo htmlentities( $html );
-// &amp;lt;h1&amp;gt;I am some HTML&amp;lt;/h1&amp;gt;
-</pre>
-
-<h3>urlencode</h3>
-<p>This function is convenient when encoding a string to be used in a query part of a URL, as a convenient way to pass variables to the next page.</p>
-
-<pre class="prettyprint linenums languague-php">
-$link = &#039;my super gallery of holiday photos!&#039;;
-echo &#039;&lt;a href=&quot;/gallery.php?gallery_name=&#039;
-	. urlencode( $link )
-	. &#039;&quot;&gt;Next Gallery&lt;/a&gt;&#039;;
-// &lt;a href=&quot;/gallery.php?gallery_name=my+super+gallery+of+holiday+photos%21&quot;&gt;Next Gallery&lt;/a&gt;
-</pre>
-
-
 <h2>Trimming</h2>
 
 <p>'Trimming' refers to removing whitespace from strings. Whitespace are characters include things like spaces, line returns and tabs.</p>
@@ -125,13 +101,13 @@ printf(&#039;%.2f&#039;, 1); // 1.00
 
 <p>The result will be printed immediately to the browser. If you want to store the result in a variable use the related function <code>sprintf</code></p>
 
+
+
 <ul class="notes-links">
 	<li><a href="http://nz.php.net/manual/en/function.strtoupper.php">strtoupper</a></li>
 	<li><a href="http://nz.php.net/manual/en/function.strtolower.php">strtolower</a></li>
 	<li><a href="http://nz.php.net/manual/en/function.ucfirst.php">ucfirst</a></li>
 	<li><a href="http://nz.php.net/manual/en/function.ucwords.php">ucwords</a></li>
-	<li><a href="http://nz.php.net/manual/en/function.htmlentities.php">htmlentities</a></li>
-	<li><a href="http://nz.php.net/manual/en/function.urlencode.php">urlencode</a></li>
 	<li><a href="http://nz.php.net/manual/en/function.trim.php">trim</a></li>
 	<li><a href="http://nz.php.net/manual/en/function.ltrim.php">ltrim</a></li>
 	<li><a href="http://nz.php.net/manual/en/function.rtrim.php">rtrim</a></li>

@@ -1,8 +1,8 @@
 <h1>Strings</h1>
 
-<p>A <kbd>string</kbd> in PHP is a series, or string, of one or more characters.</p>
+<p>A <kbd>string</kbd> in PHP is a series, or 'string', of zero or more characters specified within quotes.</p>
 
-<p>A string can contain zero characters, an empty string, and has a falsy value.</p>
+<p>Strings are truthy values except when they have zero characters ('') or have the value of the number zero <kbd>('0')</kbd>.</p>
 
 
 <h2>Creating strings</h2>
@@ -135,8 +135,36 @@ $phrase3 = &#039;He said &quot;I\&#039;ll be back&quot;&#039;; // valid
 <p>There is a built-in php function for adding slashes to strings: <kbd>addslashes</kbd>. It is most commonly used on text before inserting it into a database. You can remove slashes using <kbd>stripslashes</kbd>.</p>
 
 
+<h2>Dealing with entities</h2>
+
+<p>There are times where you will want to protect your script again user input, encode it to use in an URL, or make sure that it is safe to save to a database.</p>
+
+<h3>htmlspecialchars</h3>
+<p>Convert special characters to their HTML entities</p>
+
+<pre class="prettyprint linenums languague-php">
+$html = &quot;&lt;h1&gt;I am some HTML&lt;/h1&gt;&quot;;
+echo htmlspecialchars( $html );
+// &amp;lt;h1&amp;gt;I am some HTML&amp;lt;/h1&amp;gt;
+</pre>
+
+<h3>urlencode</h3>
+<p>This function is convenient when encoding a string to be used in a query part of a URL, as a convenient way to pass variables to the next page.</p>
+
+<pre class="prettyprint linenums languague-php">
+$link = &#039;my super gallery of holiday photos!&#039;;
+echo &#039;&lt;a href=&quot;/gallery.php?gallery_name=&#039;
+	. urlencode( $link )
+	. &#039;&quot;&gt;Next Gallery&lt;/a&gt;&#039;;
+// &lt;a href=&quot;/gallery.php?gallery_name=my+super+gallery+of+holiday+photos%21&quot;&gt;Next Gallery&lt;/a&gt;
+</pre>
+
+
 <ul class="notes-links">
 	<li><a href="http://nz.php.net/manual/en/language.types.string.php">String Type</a></li>
 	<li><a href="http://nz.php.net/manual/en/function.addslashes.php">addslashes</a></li>
 	<li><a href="http://nz.php.net/manual/en/function.stripslashes.php">stripslashes</a></li>
+	<li><a href="http://nz.php.net/manual/en/function.htmlentities.php">htmlentities</a></li>
+	<li><a href="http://php.net/manual/en/function.htmlspecialchars.php">htmlspecialchars</a></li>
+	<li><a href="http://nz.php.net/manual/en/function.urlencode.php">urlencode</a></li>
 </ul>

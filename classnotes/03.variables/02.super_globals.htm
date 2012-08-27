@@ -33,13 +33,15 @@ if ( isset() $_GET[&#039;name&#039;] ) ) echo &#039;Hello &#039; . $_GET[&#039;n
 
 
 <h2>$_GET</h2>
-<p>The $_GET super global is built from variables passed using the URL. They are usually sent as key name pairs following the page (if present) and a question mark, separated by an ampersand</p>
+<p>The $_GET super global is built from variables passed using the URL. They are usually sent as name-value pairs ( name=value) following the page (if present) and a question mark, separated by an ampersand</p>
 
 <pre class="prettyprint linenums languague-php">
 // URL: http://website.com/index.php?name=bob&amp;amp;age=32
 echo $_GET[&#039;name&#039;]; // bob
 echo $_GET[&#039;age&#039;]; // 32
 </pre>
+
+<p><span class="label label-warning">Warning</span> you can't trust user input. Use <kbd><a href="http://php.net/manual/en/function.htmlspecialchars.php">htmlspecialchars</a></kbd> to make user input safe to use. Also remember that sometimes $_GET will not be populated, so test for values before using.</p>
 
 
 <h2>$_POST</h2>
