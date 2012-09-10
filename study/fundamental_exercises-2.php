@@ -21,7 +21,7 @@
 </pre>
 
 
-<p>Which of the following values are considered FALSEY (a Boolean false)?</p>
+<p>Which of the following values are FALSEY?</p>
 <pre class="prettyprint linenums languague-php">
 0
 '0'
@@ -36,16 +36,20 @@ NULL
 
 
 <h3>Names in PHP</h3>
-<p>List whether the following variable names are valid or not and why. Then suggest a reason why it is a good name or not.</p>
+<p>Which of these are invalid variable names and why?</p>
 <pre class="prettyprint linenums languague-php">
-$my_variable
+$_my_variable
 MY_VARIABLE
 $my variable
 $my-variable
-$123
+$1variable
+</pre>
+
+<p>Which of these is the best name for a variable and why?</p>
+<pre class="prettyprint linenums languague-php">
 $name
-$_person_name
-$___name
+$___name_person
+$person_name
 $VariableForAPersonsName
 </pre>
 
@@ -140,7 +144,7 @@ if ( correct_guess() ) {
 <p>Show how to create the following date formats (using the current day):</p>
 
 <pre class="prettyprint linenums languague-php">
-10:51:04 // time with seconds
+10:51:04 am
 11/09/12
 Tue 11th September
 Tuesday the 11th of Sep 2012
