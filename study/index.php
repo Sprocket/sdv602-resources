@@ -9,7 +9,7 @@
 	<ul class="nav nav-tabs nav-stacked span3">
 		<li><a href="fundamentals.php">Fundamentals</a></li>
 	</ul>
-</div>		
+</div>
 
 <div class="page-content span9">
 
@@ -18,10 +18,11 @@
 <h4><a href="fundamentals.php">PHP Fundamentals</a></h4>
 <p>A list of things you should know about PHP.</p>
 
-<h4><a href="fundamental_exercises.php">Fundamentals Exercises</a></h4>
+<h4>Fundamentals Exercises</h4>
 <p>A collection of exercises to help you learn the fundamentals of PHP.</p>
 <ul>
-	<li><a href="fund_ex_answers_01.php">answers 01 </a></li>
+	<li><a href="fundamental_exercises.php">One</a> - <a href="fund_ex_answers_01.php">answers</a></li>
+	<li><a href="fundamental_exercises-2.php">Two</a></li>
 </ul>
 
 </div>
