@@ -22,7 +22,8 @@
 <p>A collection of exercises to help you learn the fundamentals of PHP.</p>
 <ul>
 	<li><a href="fundamental_exercises.php">One</a> - <a href="fund_ex_answers_01.php">answers</a></li>
-	<li><a href="fundamental_exercises-2.php">Two</a></li>
+	<li><a href="fundamental_exercises-2.php">Fundamentals Exercises Two</a></li>
+	<li><a href="fundamental_exercises-3.php">Fundamentals Exercises Three</a></li>
 </ul>
 
 </div>

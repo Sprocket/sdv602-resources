@@ -1,0 +1,56 @@
+<h1>For statements</h1>
+
+
+<p><kbd>for</kbd> is a way that allows us to iterate over some code a certain number of times. It takes three expressions</p>
+
+<pre class="prettyprint linenums languague-php">
+for ( exp1; exp2; exp3 ) {
+	// code to execute
+}
+</pre>
+
+<p><strong>expr1</strong> is evaluated (executed) once at the beginning of the loop.</p>
+
+<p><strong>expr2</strong> is evaluated at the beginning of each iteration. If it evaluates to TRUE, the loop continues and the nested statement(s) are executed. If it evaluates to FALSE, the execution of the loop ends.</p>
+
+<p><strong>expr3</strong> is evaluated at the end of each iteration.</p>
+
+<p>The usual pattern is to assign a variable a value, perform a test, and then increment the varaible.</p>
+
+<pre class="prettyprint linenums languague-php">
+for ($i = 1; $i &lt;= 10; $i++) {
+	echo $i;
+} // 12345678910
+</pre>
+
+<p>Each of the expressions can be empty or contain multiple expressions separated by commas.</p>
+
+<p><kbd>break</kbd> statements can be used to break out of the loop.
+</p>
+
+
+<pre class="prettyprint linenums languague-php">
+$people = array(
+    array( &#039;name&#039; =&gt; &#039;Sally&#039; ),
+    array( &#039;name&#039; =&gt; &#039;Sue&#039; )
+);
+
+for( $i = 0, $size = count( $people ); $i &lt; $size; ++$i ) {
+    echo $people[$i][&#039;name&#039;];
+}
+</pre>
+
+
+<p>The above code can be slow, because the array size is fetched on every iteration. Since the size never changes, the loop be easily optimized by using an intermediate variable:</p>
+<pre class="prettyprint linenums languague-php">
+$size = count( $people );
+for( $i = 0, $size; $i &lt; $size; ++$i ) {
+    echo $people[$i][&#039;name&#039;];
+}
+</pre>
+
+
+
+<ul class="notes-links">
+	<li><a href="http://php.net/manual/en/control-structures.for.php">for</a></li>
+</ul>

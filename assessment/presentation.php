@@ -1,9 +1,9 @@
 <?php
 	require '../inc/functions.php';
-	echo page_header('SDV602 Resources');
+	echo page_header('SDV602 Assessment 1: Presentation');
 ?>
 <div class="container page-wrap">
-<div class="row">	
+<div class="row">
 
 <div class="page-content span10 offset1">
 

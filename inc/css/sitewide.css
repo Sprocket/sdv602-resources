@@ -2,6 +2,7 @@
 @import 'bootstrap.min.css';
 @import 'prettify.css';
 @import '../redactor/css/redactor.css';
+@import 'print.css' print;
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * *
 	following styles will override those above
@@ -144,7 +145,7 @@ a[href*="php.net"]
 }
 .navbar-fixed-top .nav {
 
-background-image:-moz-linear-gradient(50% 0% -90deg,rgb(79,79,79) 0%,rgb(27,27,27) 50%,rgb(0,0,0) 50%,rgb(0,0,0) 98%); 
+background-image:-moz-linear-gradient(50% 0% -90deg,rgb(79,79,79) 0%,rgb(27,27,27) 50%,rgb(0,0,0) 50%,rgb(0,0,0) 98%);
 background-image:-webkit-gradient(linear,50% 0%,50% 100%,color-stop(0, rgb(79,79,79)),color-stop(0.5, rgb(27,27,27)),color-stop(0.5, rgb(0,0,0)),color-stop(0.98, rgb(0,0,0)));
 background-image:-webkit-linear-gradient(-90deg,rgb(79,79,79) 0%,rgb(27,27,27) 50%,rgb(0,0,0) 50%,rgb(0,0,0) 98%);
 background-image:-o-linear-gradient(-90deg,rgb(79,79,79) 0%,rgb(27,27,27) 50%,rgb(0,0,0) 50%,rgb(0,0,0) 98%);
@@ -161,7 +162,7 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff4f4f4f,endCol
 	border-right: 1px solid #444;
 	text-align: center;
 	font-size: 1em;
-	line-height: 25px;	
+	line-height: 25px;
 	vertical-align: middle;
 }
 .navbar .nav > li > a {

@@ -3,7 +3,7 @@
 	echo page_header('SDV602 Resources');
 ?>
 <div class="container page-wrap">
-<div class="row">	
+<div class="row">
 
 <div class="page-content span10 offset1">
 
@@ -41,7 +41,7 @@
 	<tr>
 		<th>3</th>
 		<td>
-			<h4>Helper</h4>
+			<h4><a href="helper.php">Helper</a></h4>
 			<p>Build a helper that can be incorporated into other projects</p>
 		</td>
 		<td>30</td>
