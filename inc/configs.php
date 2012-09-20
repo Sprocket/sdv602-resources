@@ -11,7 +11,7 @@ BASE URL
 	location of the main index.php page from web server
 	no slash at the end
  * * * * * * * * * * * * * * * * * * * */
-if ( $_SERVER['SERVER_NAME'] == 'phpfogapp.com' ) define('BASE_URL', '/');
+if ( $_SERVER['SERVER_NAME'] == 'sdv602.phpfogapp.com' ) define('BASE_URL', '/');
 else define('BASE_URL', '/sdv602-resources');
 
 
