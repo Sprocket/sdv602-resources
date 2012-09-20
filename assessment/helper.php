@@ -77,10 +77,18 @@
 		<dd>Resize and manipulate image files</dd>
 	<dt>XML</dt>
 		<dd>Allow users to incorporate XML files into their apps</dd>
-	<dt>Twitter</dt>
-		<dd>Connect to and retrieve tweets</dd>
+	<dt>Twitter, Facebook</dt>
+		<dd>Connect to and retrieve tweets, posts etc. using APIs</dd>
 	<dt>Files</dt>
 		<dd>Retrieve information about the filesystem</dd>
+	<dt>Email</dt>
+		<dd>A helper for formatting and sending emails</dd>
+	<dd>Form Processor</dd>
+		<dd>Format and clean the results of forms</dd>
+	<dt>Variables</dt>
+		<dd>Test, convert and report on variables and constants</dd>
+	<dt>Dates and time</dt>
+		<dd>Format and convert dates and times</dd>
 </dl>
 
 

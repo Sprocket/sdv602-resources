@@ -10,6 +10,7 @@ define('VERSION', '0.3');
 BASE URL
 	location of the main index.php page from web server
 	no slash at the end
+	/sdv602-resources
  * * * * * * * * * * * * * * * * * * * */
 define('BASE_URL', '');
 
