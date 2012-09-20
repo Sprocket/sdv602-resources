@@ -11,7 +11,7 @@ BASE URL
 	location of the main index.php page from web server
 	no slash at the end
  * * * * * * * * * * * * * * * * * * * */
-define('BASE_URL', '/');
+define('BASE_URL', '');
 
 
 /* * * * * * * * * * * * * * * * * * * *
