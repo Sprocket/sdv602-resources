@@ -59,6 +59,8 @@
 		<dd>Common functions for constructing HTML elements</dd>
 	<dt>Forms</dt>
 		<dd>Create and process forms</dd>
+	<dt>Form Processor</dt>
+		<dd>Format and clean the results of forms</dd>
 	<dt>Uploader</dt>
 		<dd>Easily upload and process files</dd>
 	<dt>Authentication</dt>
@@ -83,10 +85,8 @@
 		<dd>Retrieve information about the filesystem</dd>
 	<dt>Email</dt>
 		<dd>A helper for formatting and sending emails</dd>
-	<dd>Form Processor</dd>
-		<dd>Format and clean the results of forms</dd>
 	<dt>Variables</dt>
-		<dd>Test, convert and report on variables and constants</dd>
+		<dd>Test, convert, combine and report on variables and constants</dd>
 	<dt>Dates and time</dt>
 		<dd>Format and convert dates and times</dd>
 </dl>
