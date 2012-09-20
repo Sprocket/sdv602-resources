@@ -1,0 +1,60 @@
+<h1>Doc Blocks</h1>
+
+<p>A common way of commenting your code is to use 'doc blocks'. These provide useful notes on specific parts of your code. For example. below we have a function, above it is a comment that details each of the parameters and what the function returns.</p>
+
+<p>This is a useful way of keeping your code understandable by others who can quickly understand and use your code. There are also IDEs and automated documentation systems that can parse these and automatically create documentation. </p>
+
+<pre class="prettyprint linenums languague-php">
+/**
+ * wraps a string in a tag
+ * @param  string $string the string to wrap
+ * @param  string $tag    the tag to wrap the string in
+ * @return string         the wrapped string
+ */
+function helper_str_wrap( $string, $tag ) {
+
+	return sprintf( &#039;&lt;%s&gt;%s&lt;/%s&gt;&#039;,
+		$tag,
+		$string,
+		$tag
+	);
+}
+</pre>
+
+<p>It shows each of the parameters, their type and a brief description. It then shows what the function will return. A skeleton for this example would be:</p>
+
+<pre class="prettyprint linenums languague-php">
+/**
+ * [helper_str_wrap description]
+ * @param  [type] $string [description]
+ * @param  [type] $tag    [description]
+ * @return [type]         [description]
+ */
+function helper_str_wrap( $string, $tag ) {
+ ...
+}
+</pre>
+
+<p>Variables and constants can also use a doc block:</p>
+<pre class="prettyprint linenums languague-php">
+/**
+ * general salutation
+ * @var string
+ */
+$salutation = &#039;hi&#039;;
+</pre>
+
+<p>It can be a good idea to create your doc blocks <strong>after</strong> you have written your functions.</p>
+
+<p>There is a useful Sublime Text plug in called 'Docblockr' which will create this skeleton for you. Use Package Control to install it.</p>
+
+<p>To create a Doc Block by hand follow this pattern, listing each parameter.</p>
+
+<pre class="prettyprint linenums languague-php">
+/**
+ * [function description]
+ * @param  [type] [name] [description]
+ * @return [type]         [description]
+ */
+</pre>
+
