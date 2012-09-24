@@ -11,6 +11,8 @@
 
 <p>There will be required to created user documentation for your helper so others can learn how to use it.</p>
 
+<p><span class="label label-info">Note</span> It's reccomended you work on your documentation after you have finished writing your code. It will be easier and you won't have to update it so much when you change your code.</p>
+
 <h2>Comments</h2>
 
 <p>Your code will have to be well commented as your code will be read by others. Please do not comment for the sake of commenting: for instance, when your code is self explanatory.</p>
@@ -19,9 +21,25 @@
 
 <h2>Doc Blocks</h2>
 
-<p>Each function will require its own documentation. Look at the page on 'docblocks' within the class notes.</p>
+<p>Look at the page on 'docblocks' within the class notes.</p>
 
-<p>It is reccomended you document your functions after you have finished writing your code.</p>
+<p>Each function will require its own documentation. You will also need to have a docblock at the top of your helper. Include entries for <kbd>author, package</kbd> and <kbd>version.</kbd> </p>
+
+<pre class="prettyprint linenums languague-php">
+&lt;?php
+/**
+ * LOGGER! a logging helper
+ * create and access log files with style
+ *
+ * @author Duncan Heal &lt;duncan@sprocket.co.nz&gt;
+ * @package Logger
+ * @version 0.6
+ */
+
+// function definitions, etc.
+...
+</pre>
+
 
 <h3>Docblockr Sublime Text Plug in</h3>
 
@@ -42,7 +60,7 @@
 
 <h2>User Documentation</h2>
 
-<p>Each helper will be required to provide documentation and examples so others can quickly learn how to code with your helper. This </p>
+<p>Each helper will be required to be documentated and include examples so others can quickly learn how to code with your helper.</p>
 
 <p><span class="label label-info">Note</span> Do not document private functions and variables as they are not considered part of the public <abbr title="Application Programming Interface">API</abbr>.</p>
 
@@ -50,7 +68,7 @@
 
 List each of your public functions within h4 headers. I suggest you simply copy the first line including your parameters and default values. Below this write a brief description of the function. Make sure to explain each of the parameters.</p>
 
-<p>Below this include some examples of how users could use the function within a <kbd>pre</kbd> tag. Provide comments on the outcome.</p>
+<p>Below this include some examples of how users could use the function within a <kbd>pre</kbd> tag. Provide comments on the outcome and suggestions on how your functions could be used.</p>
 
 
 <div class="well">
@@ -70,6 +88,7 @@ helper_log_write( &#039;Another file not found&#039;, &#039;error&#039; );
 </pre>
 </div>
 
+<p>Functions do not need to be documented in the order they are defined in your code. It can be a good idea to group your functions into related groups.</p>
 
 
 </div><!-- page-content -->
