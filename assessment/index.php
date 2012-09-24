@@ -41,8 +41,12 @@
 	<tr>
 		<th>3</th>
 		<td>
-			<h4><a href="helper.php">Helper</a></h4>
+			<h4><a href="helper/helper.php">Helper</a></h4>
 			<p>Build a helper that can be incorporated into other projects</p>
+			<p>
+				<a href="helper/helper-questions.php" class="btn">Helper FAQs</a>
+				<a href="helper/helper-documentation.php" class="btn">Helper Documentation</a>
+			</p>
 		</td>
 		<td>30</td>
 	</tr>

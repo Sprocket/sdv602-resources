@@ -7,7 +7,7 @@
 
 <div class="span3">
 
-</div>		
+</div>
 
 <div class="page-content span9">
 
