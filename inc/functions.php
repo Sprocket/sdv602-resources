@@ -37,12 +37,16 @@ function page_footer() {
 function main_nav() {
 	global $sections;
 
+	$home = ( BASE_URL == '' ) ? '/' : BASE_URL;
+
 	$nav = '
 	<div class="navbar navbar-fixed-top navbar-inverse">
 	<div class="navbar-inner">
     <div class="container">
 		<ul class="nav">
-      <li><a class="brand" href="'.BASE_URL.'">'.PROJ_NAME.'</a></li>';
+      <li><a class="brand" href="'
+      	. $home
+      	. '">'.PROJ_NAME.'</a></li>';
 
 	foreach ( $sections as $section ) {
 		$nav .= sprintf( '<li><a href="'.BASE_URL.'%s" title="%s">%s</a></li>',
