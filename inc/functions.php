@@ -1,6 +1,7 @@
 <?php
 
-require 'configs.php';
+if ( file_exists('../configs.php') ) require '../configs.php';
+else require 'configs.default.php';
 
 // PAGE FUNCTIONS
 
