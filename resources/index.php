@@ -15,7 +15,7 @@
 		<li><a href="#sublime">Sublime Text</a></li>
 		<li><a href="#sublimepackages">Sublime Text Packages</a></li>
 	</ul>
-</div>		
+</div>
 
 <div class="page-content span9">
 <h1>SDV602 Resources</h1>
@@ -42,7 +42,7 @@
 	<dt><a href="http://sheriframadan.com/php-101/">PHP 101</a></dt>
 	<dd>A great introductory course on PHP</dd>
 	<dt><a href="http://phpmaster.com/category/php-tutorials/beginner/">PHP Master</a></dt>
-	<dd>A collection of PHP tutes from Benginger to Expert</dd>
+	<dd>A collection of PHP tutes from Beginner to Expert</dd>
 </dl>
 
 
@@ -76,8 +76,11 @@
 	<dd>Where to get Sublime Text editor</dd>
 	<dt><a href="http://steverandytantra.com/thoughts/three-months-with-sublime-text-2">3 Months with Sublime Text</a></dt>
 	<dd>'Cool things' and some mods</dd>
-	<dt><a href="http://docs.sublimetext.info/en/latest/index.html">Unoffical Documentation</a></dt>
+	<dt><a href="http://docs.sublimetext.info/en/latest/index.html">Unofficial Documentation</a></dt>
 	<dd>Pretty much anything you'd ever want to know about Sublime</dd>
+	<dt>Perfect Workflow in Sublime Text</dt>
+	<dd><span class="label label-info">Recommended</span> <a href="http://net.tutsplus.com/articles/news/perfect-workflow-in-sublime-text-free-course/">Tutsplus Free Course</a>
+	</dd>
 </dl>
 
 <h3 id="sublimepackages">Sublime Packages</h3>

@@ -58,6 +58,8 @@
 
 <p><a href="http://www.youtube.com/watch?v=WaQk9QZNaOY">YouTube: Creating Docblocks Using DocBlockr</a></p>
 
+<p><a href="https://tutsplus.com/lesson/docblockr/">TutsPlus Video on Docblocks</a></p>
+
 <h2>User Documentation</h2>
 
 <p>Each helper will be required to be documentated and include examples so others can quickly learn how to code with your helper.</p>
